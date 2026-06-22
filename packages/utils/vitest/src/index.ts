@@ -1,6 +1,6 @@
-import { defineConfig, type ViteUserConfig } from 'vitest/config';
+import { defineConfig, type UserWorkspaceConfig } from 'vitest/config';
 
-export const shared = (conf: ViteUserConfig) =>
+export const shared = (conf: UserWorkspaceConfig) =>
   defineConfig({
     resolve: {
       tsconfigPaths: true,
@@ -11,6 +11,8 @@ export const shared = (conf: ViteUserConfig) =>
     test: {
       globals: true,
       logHeapUsage: false,
+      passWithNoTests: true,
+      environment: 'node',
 
       env: {
         NODE_ENV: 'test',

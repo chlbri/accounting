@@ -6,8 +6,8 @@ export default defineConfig({
   },
 
   test: {
-    passWithNoTests: true,
     slowTestThreshold: 3000,
+    passWithNoTests: true,
 
     coverage: {
       enabled: true,
@@ -17,7 +17,7 @@ export default defineConfig({
     },
 
     projects: [
-      'packages/core/vitest.config.ts',
+      'packages/uemoa/vitest.config.ts',
       'packages/__tests__/project1/vitest.config.ts',
     ],
   },

@@ -1,7 +1,9 @@
-import todo from '@bemedev/new-package-name-to-change';
+import { accountPlan } from '@bemedev/accounting-uemoa';
 
-describe('project1 tests', () => {
-  test('runs core todo function', () => {
-    expect(todo()).toBe('todo');
+describe('bemedev accounting uemoa', () => {
+  describe('#01 => NAMES', () => {
+    test('##001 => number: 10, name = "CAPITAL" ', () => {
+      expect(accountPlan[10].name).toBe('CAPITAL');
+    });
   });
 });
