@@ -1,6 +1,35 @@
-# Beatifull lib
+# @bemedev/accounting-uemoa
 
-A beautifull description
+Complete, strongly-typed SYSCOHADA (Système Comptable OHADA) Chart of
+Accounts for UEMOA countries.
+
+<br/>
+
+## Installation
+
+```bash
+pnpm add @bemedev/accounting-uemoa
+```
+
+## Usage
+
+```ts
+import { accountPlan } from '@bemedev/accounting-uemoa';
+
+const account = accountPlan[10];
+// { name: 'CAPITAL', description: 'Capital accounts' }
+```
+
+## Features
+
+- **All 9 SYSCOHADA Classes**: Pre-defined records for `class1Accounts`
+  through `class9Accounts`.
+- **Merged Plan**: Access the unified `accountPlan` record containing all
+  codes.
+- **Strongly Typed**: Provides `AccountCode` union type matching all valid
+  account codes.
+- **Dual Language**: Each account features its official French `name` and
+  English `description`.
 
 <br/>
 
@@ -26,4 +55,4 @@ chlbri (bri_lvi@icloud.com)
 
 ## Liens
 
-- [Documentation](https://github.com/chlbri/new-package)
+- [Documentation](https://github.com/chlbri/accounting)

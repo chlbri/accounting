@@ -1,7 +1,7 @@
 {
   "name": "@bemedev/accounting-uemoa",
-  "version": "0.1.0",
-  "description": "The package name need to be changed",
+  "version": "0.1.1",
+  "description": "SYSCOHADA / UEMOA Chart of Accounts",
   "type": "module",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

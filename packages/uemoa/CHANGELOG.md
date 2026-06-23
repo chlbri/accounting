@@ -3,6 +3,37 @@
 <br/>
 <br/>
 
+<details>
+<summary>
+
+## **[0.1.1] - 23/06/2026** => _12:02_
+
+</summary>
+
+- Update: Mettre à jour la documentation (CHANGELOG.md et README.md)
+- <u>Test coverage **_100%_**</u>
+
+</details>
+
+<br/>
+
+<details>
+<summary>
+
+## **[0.1.0] - 23/06/2026** => _11:50_
+
+</summary>
+
+- Add: Initialiser le package avec le plan comptable SYSCOHADA / UEMOA
+  (classes 1 à 9)
+- Refactor: Refactoriser les exports pour inclure les comptes et codes de
+  toutes les classes, et le type d'union AccountCode
+- <u>Test coverage **_100%_**</u>
+
+</details>
+
+<br/>
+
 ### Version [0.0.1] --> _date & hour_
 
 - ✨ Première version de la bibliothèque
