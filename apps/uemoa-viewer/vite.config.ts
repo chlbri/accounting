@@ -6,18 +6,16 @@ import { defineConfig } from 'vite';
 import viteSolid from 'vite-plugin-solid';
 
 export default defineConfig({
+  resolve: { tsconfigPaths: true },
   server: {
     port: 3000,
+    host: '0.0.0.0',
   },
-  resolve: {
-    tsconfigPaths: true,
-  },
-
   plugins: [
     tailwindcss(),
     contentCollections({}),
     tanstackStart({}),
-    nitro(),
     viteSolid({ ssr: true }),
+    nitro(),
   ],
 });

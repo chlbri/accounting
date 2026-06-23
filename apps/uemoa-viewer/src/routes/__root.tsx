@@ -1,5 +1,3 @@
-/// <reference types="vite/client" />
-
 import seo from '~seo';
 import {
   createRootRoute,

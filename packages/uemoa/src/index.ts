@@ -17,44 +17,27 @@
  * @see https://www.ohada.com/
  * Source: Official SYSCOHADA Chart of Accounts PDF – www.africa.africa-web.org
  */
+
+import { class1Accounts, type Class1AccountCode } from './class1';
+import { class2Accounts, type Class2AccountCode } from './class2';
+import { class3Accounts, type Class3AccountCode } from './class3';
+import { class4Accounts, type Class4AccountCode } from './class4';
+import { class5Accounts, type Class5AccountCode } from './class5';
+import { class6Accounts, type Class6AccountCode } from './class6';
+import { class7Accounts, type Class7AccountCode } from './class7';
+import { class8Accounts, type Class8AccountCode } from './class8';
+import { class9Accounts, type Class9AccountCode } from './class9';
+
 export type { Account, Plan } from './types';
-
-export { class1Accounts } from './class1';
-export type { Class1AccountCode } from './class1';
-
-export { class2Accounts } from './class2';
-export type { Class2AccountCode } from './class2';
-
-export { class3Accounts } from './class3';
-export type { Class3AccountCode } from './class3';
-
-export { class4Accounts } from './class4';
-export type { Class4AccountCode } from './class4';
-
-export { class5Accounts } from './class5';
-export type { Class5AccountCode } from './class5';
-
-export { class6Accounts } from './class6';
-export type { Class6AccountCode } from './class6';
-
-export { class7Accounts } from './class7';
-export type { Class7AccountCode } from './class7';
-
-export { class8Accounts } from './class8';
-export type { Class8AccountCode } from './class8';
-
-export { class9Accounts } from './class9';
-export type { Class9AccountCode } from './class9';
-
-import { class1Accounts } from './class1';
-import { class2Accounts } from './class2';
-import { class3Accounts } from './class3';
-import { class4Accounts } from './class4';
-import { class5Accounts } from './class5';
-import { class6Accounts } from './class6';
-import { class7Accounts } from './class7';
-import { class8Accounts } from './class8';
-import { class9Accounts } from './class9';
+export { class1Accounts, Class1AccountCode };
+export { class2Accounts, Class2AccountCode };
+export { class3Accounts, Class3AccountCode };
+export { class4Accounts, Class4AccountCode };
+export { class5Accounts, Class5AccountCode };
+export { class6Accounts, Class6AccountCode };
+export { class7Accounts, Class7AccountCode };
+export { class8Accounts, Class8AccountCode };
+export { class9Accounts, Class9AccountCode };
 
 /**
  * The complete SYSCOHADA / UEMOA chart of accounts — all 9 classes merged
@@ -75,4 +58,13 @@ export const accountPlan = {
 } as const;
 
 /** Union of all valid SYSCOHADA account codes (numeric). */
-export type AccountCode = keyof typeof accountPlan;
+export type AccountCode =
+  | Class1AccountCode
+  | Class2AccountCode
+  | Class3AccountCode
+  | Class4AccountCode
+  | Class5AccountCode
+  | Class6AccountCode
+  | Class7AccountCode
+  | Class8AccountCode
+  | Class9AccountCode;
