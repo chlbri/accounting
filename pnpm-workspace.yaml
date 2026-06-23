@@ -2,8 +2,10 @@ packages:
   - 'packages/uemoa'
   - 'packages/__tests__/project1'
   - 'packages/utils/vitest'
+  - 'apps/uemoa-viewer'
 
 allowBuilds:
+  '@parcel/watcher': true
   esbuild: true
 
 minimumReleaseAge: 300
