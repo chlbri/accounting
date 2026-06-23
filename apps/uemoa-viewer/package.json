@@ -34,6 +34,7 @@
   "scripts": {
     "_preconfig": "chmod +x .husky/commit-msg && chmod +x .husky/pre-commit",
     "build": "vite build",
+    "prebuild": "pnpm --filter @bemedev/accounting-uemoa build",
     "config": "pnpm install",
     "config:off": "pnpm run config --offline",
     "ci": "CI_START=$(date +%s) && pnpm run config:off && pnpm run lint && pnpm run test && pnpm run p-q && echo \"\n✅ CI takes $(($(date +%s) - CI_START))s\n\"",
