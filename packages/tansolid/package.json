@@ -1,0 +1,48 @@
+{
+  "name": "@bemedev/tansolid",
+  "version": "0.0.1",
+  "private": true,
+  "description": "SolidJS + TanStack custom UI package",
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "module": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "author": {
+    "email": "bri_lvi@icloud.com",
+    "name": "chlbri",
+    "url": "https://bemedev.vercel.app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chlbri/accounting"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "pnpm run rm:lib && pnpm run rolldown",
+    "rm:lib": "pnpx rimraf ./lib",
+    "test": "vitest run",
+    "fmt": "oxfmt",
+    "lint": "oxlint --fix && pnpm run fmt",
+    "pretest": "pnpm run build",
+    "posttest": "pnpm run fmt",
+    "test:only": "pnpm run test --no-coverage",
+    "_ci": "pnpm run lint && pnpm run test",
+    "rolldown": "rolldown -c"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.6.0"
+  },
+  "peerDependencies": {
+    "solid-js": "^1.9.13"
+  },
+  "devDependencies": {
+    "@bemedev/dev-utils": "^0.8.2",
+    "rolldown": "^1.1.2",
+    "typescript": "^6.0.3",
+    "vitest": "4.1.9"
+  }
+}

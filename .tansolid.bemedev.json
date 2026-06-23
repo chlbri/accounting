@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "path": "./packages/tansolid/src",
+  "files": [
+    "ui/molecules/Tooltip.constants",
+    "ui/molecules/Tooltip.types",
+    "utils/types",
+    "constants/colors",
+    "constants/index",
+    "types/index",
+    "ui/cn/utils",
+    "ui/helpers/seo"
+  ]
+}

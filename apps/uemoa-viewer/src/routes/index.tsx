@@ -1,6 +1,6 @@
-import { ALL_ACCOUNTS } from '#constants';
 import { createFileRoute } from '@tanstack/solid-router';
 import { AccountsTable } from '~/features/search/AccountsTable';
+import { ALL_ACCOUNTS } from '~/features/search/constants';
 
 export const Route = createFileRoute('/')({
   component: () => {

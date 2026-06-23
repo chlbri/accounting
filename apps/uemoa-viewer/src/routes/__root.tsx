@@ -1,4 +1,4 @@
-import seo from '~seo';
+import { seo } from '@bemedev/tansolid';
 import {
   createRootRoute,
   Outlet,
@@ -9,8 +9,8 @@ import {
 import { TanStackRouterDevtools } from '@tanstack/solid-router-devtools';
 import appCss from '../../tailwind.css?url';
 import { HydrationScript } from 'solid-js/web';
-import { CLASS_META } from '#constants';
 import { For } from 'solid-js';
+import { CLASS_META } from '~/features/search/constants';
 
 const NavBar = () => (
   <nav class='flex-1 overflow-y-auto py-3 px-2 space-y-0.5'>

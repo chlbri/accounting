@@ -1,4 +1,4 @@
-import type { AccountEntry } from '#constants';
+import type { AccountEntry } from './types';
 import { createMemo, createSignal } from 'solid-js';
 
 export const createSearch = (...accounts: AccountEntry[]) => {

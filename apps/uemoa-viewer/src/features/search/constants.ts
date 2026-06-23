@@ -1,4 +1,3 @@
-import type { Plan } from '@bemedev/accounting-uemoa';
 import {
   class1Accounts,
   class2Accounts,
@@ -10,31 +9,8 @@ import {
   class8Accounts,
   class9Accounts,
 } from '@bemedev/accounting-uemoa';
-
-export type AccountEntry = {
-  code: number;
-  name: string;
-  description: string;
-  classId: number;
-};
-
-export type ClassMeta = {
-  id: number;
-  label: string;
-  description: string;
-  /** Tailwind color token suffix for accent */
-  color: string;
-  accounts: AccountEntry[];
-};
-
-const toEntries = (map: Plan, classId: number): AccountEntry[] => {
-  return Object.entries(map).map(([code, acc]) => ({
-    code: Number(code),
-    name: acc.name,
-    description: acc.description,
-    classId,
-  }));
-};
+import { toEntries } from './helpers';
+import type { AccountEntry, ClassMeta } from './types';
 
 export const CLASS_META: ClassMeta[] = [
   {

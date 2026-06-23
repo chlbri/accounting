@@ -19,6 +19,7 @@ export default defineConfig({
     projects: [
       'packages/uemoa/vitest.config.ts',
       'packages/__tests__/project1/vitest.config.ts',
+      'packages/tansolid/vitest.config.ts',
     ],
   },
 });

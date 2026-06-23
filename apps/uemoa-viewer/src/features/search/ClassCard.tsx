@@ -1,6 +1,6 @@
 import { Link } from '@tanstack/solid-router';
 import type { Component } from 'solid-js';
-import type { ClassMeta } from '#constants';
+import type { ClassMeta } from './types';
 
 const CLASS_ICONS = [
   '🏛️', // 1 – Equity & LT resources
@@ -29,7 +29,7 @@ export const ClassCard: Component<Props> = props => {
       class='group relative flex flex-col gap-3 rounded-2xl border border-border bg-card p-5 transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1 cursor-pointer no-underline!'
     >
       {/* Gradient glow */}
-      <div class='absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
+      <div class='absolute inset-0 rounded-2xl bg-linear-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
 
       <div class='relative flex items-start justify-between'>
         <div class='flex items-center gap-3'>
@@ -43,7 +43,7 @@ export const ClassCard: Component<Props> = props => {
             </p>
           </div>
         </div>
-        <span class='flex-shrink-0 rounded-full bg-primary/10 px-2.5 py-1 text-xs font-semibold text-primary tabular-nums'>
+        <span class='shrink-0 rounded-full bg-primary/10 px-2.5 py-1 text-xs font-semibold text-primary tabular-nums'>
           {count}
         </span>
       </div>

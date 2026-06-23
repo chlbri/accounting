@@ -2,6 +2,7 @@ packages:
   - 'packages/uemoa'
   - 'packages/__tests__/project1'
   - 'packages/utils/vitest'
+  - 'packages/tansolid'
   - 'apps/uemoa-viewer'
 
 allowBuilds:

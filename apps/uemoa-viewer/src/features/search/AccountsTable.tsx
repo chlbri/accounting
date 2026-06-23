@@ -1,7 +1,8 @@
-import { CLASS_META, type AccountEntry } from '#constants';
 import { For, Show, type Component } from 'solid-js';
 import { createSearch } from '~/features/search/hooks';
-import { cn } from '~cn/utils';
+import { cn } from '@bemedev/tansolid';
+import { CLASS_META } from './constants';
+import type { AccountEntry } from './types';
 
 type Props = {
   accounts: AccountEntry[];
