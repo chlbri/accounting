@@ -1,16 +1,15 @@
-import { seo } from '@bemedev/tansolid';
+import { CLASS_META, seo } from '@bemedev/tansolid';
 import {
   createRootRoute,
-  Outlet,
   HeadContent,
-  Scripts,
   Link,
+  Outlet,
+  Scripts,
 } from '@tanstack/solid-router';
 import { TanStackRouterDevtools } from '@tanstack/solid-router-devtools';
-import appCss from '../../tailwind.css?url';
-import { HydrationScript } from 'solid-js/web';
 import { For } from 'solid-js';
-import { CLASS_META } from '~/features/search/constants';
+import { HydrationScript } from 'solid-js/web';
+import appCss from '../../tailwind.css?url';
 
 const NavBar = () => (
   <nav class='flex-1 overflow-y-auto py-3 px-2 space-y-0.5'>

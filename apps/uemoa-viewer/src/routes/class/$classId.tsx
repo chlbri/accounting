@@ -1,7 +1,6 @@
+import { AccountsTable, CLASS_META } from '@bemedev/tansolid';
 import { createFileRoute, notFound } from '@tanstack/solid-router';
 import { Show } from 'solid-js';
-import { AccountsTable } from '~/features/search/AccountsTable';
-import { CLASS_META } from '~/features/search/constants';
 
 const CLASS_ICONS = ['🏛️', '🏗️', '📦', '📋', '💰', '📉', '📈', '🔖', '🧮'];
 
