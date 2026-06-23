@@ -1,275 +1,287 @@
 import type { Plan } from './types';
 
 /**
- * SYSCOHADA — CLASSE 3 : Comptes de stocks
+ * SYSCOHADA — CLASS 3: Inventory / Stock Accounts
  * (Class 3: Inventory / Stock Accounts)
  *
  * Source: Official SYSCOHADA Chart of Accounts PDF, pages 20–23.
  */
 export const class3Accounts = {
   31: {
-    name: 'MARCHANDISES',
+    name: 'MERCHANDISE',
     description: 'Merchandise / goods for resale',
   },
-  311: { name: 'MARCHANDISES A', description: 'Merchandise — category A' },
+  311: { name: 'MERCHANDISE A', description: 'Merchandise — category A' },
   3111: {
-    name: 'Marchandises A1',
+    name: 'Merchandise A1',
     description: 'Merchandise A — subcategory 1',
   },
   3112: {
-    name: 'Marchandises A2',
+    name: 'Merchandise A2',
     description: 'Merchandise A — subcategory 2',
   },
-  312: { name: 'MARCHANDISES B', description: 'Merchandise — category B' },
+  312: { name: 'MERCHANDISE B', description: 'Merchandise — category B' },
   3121: {
-    name: 'Marchandises B1',
+    name: 'Merchandise B1',
     description: 'Merchandise B — subcategory 1',
   },
   3122: {
-    name: 'Marchandises B2',
+    name: 'Merchandise B2',
     description: 'Merchandise B — subcategory 2',
   },
   318: {
-    name: 'MARCHANDISES HORS ACTIVITÉS ORDINAIRES (H.A.O.)',
+    name: 'MERCHANDISE HELD OUTSIDE ORDINARY ACTIVITIES (HAO)',
     description: 'Merchandise held outside ordinary activities (HAO)',
   },
 
   32: {
-    name: 'MATIÈRES PREMIÈRES ET FOURNITURES LIÉES',
+    name: 'RAW MATERIALS AND RELATED SUPPLIES',
     description: 'Raw materials and related supplies',
   },
-  321: { name: 'MATIÈRES A', description: 'Raw materials — category A' },
-  322: { name: 'MATIÈRES B', description: 'Raw materials — category B' },
+  321: {
+    name: 'RAW MATERIALS A',
+    description: 'Raw materials — category A',
+  },
+  322: {
+    name: 'RAW MATERIALS B',
+    description: 'Raw materials — category B',
+  },
   323: {
-    name: 'FOURNITURES (A,B)',
+    name: 'SUPPLIES (A,B)',
     description: 'Supplies — categories A and B',
   },
 
   33: {
-    name: 'AUTRES APPROVISIONNEMENTS',
+    name: 'OTHER SUPPLIES AND CONSUMABLES',
     description: 'Other supplies and consumables',
   },
   331: {
-    name: 'MATIÈRES CONSOMMABLES',
+    name: 'CONSUMABLE MATERIALS',
     description: 'Consumable materials',
   },
   332: {
-    name: "FOURNITURES D'ATELIER ET D'USINE",
+    name: "WORKSHOP AND FACTORY SUPPLIES D'ATELIER ET D'USINE",
     description: 'Workshop and factory supplies',
   },
   333: {
-    name: 'FOURNITURES DE MAGASIN',
+    name: 'STORE/WAREHOUSE SUPPLIES',
     description: 'Store/warehouse supplies',
   },
-  334: { name: 'FOURNITURES DE BUREAU', description: 'Office supplies' },
-  335: { name: 'EMBALLAGES', description: 'Packaging materials' },
+  334: { name: 'OFFICE SUPPLIES', description: 'Office supplies' },
+  335: { name: 'PACKAGING MATERIALS', description: 'Packaging materials' },
   3351: {
-    name: 'Emballages perdus',
+    name: 'Non-returnable packaging',
     description: 'Non-returnable packaging',
   },
   3352: {
-    name: 'Emballages récupérables non identifiables',
+    name: 'Returnable non-individually-identifiable packaging',
     description: 'Returnable non-individually-identifiable packaging',
   },
   3353: {
-    name: 'Emballages à usage mixte',
+    name: 'Mixed-use packaging',
     description: 'Mixed-use packaging',
   },
   3358: {
-    name: 'Autres emballages',
+    name: 'Other packaging materials',
     description: 'Other packaging materials',
   },
   338: {
-    name: 'AUTRES MATIÈRES',
+    name: 'OTHER MATERIALS AND SUPPLIES',
     description: 'Other materials and supplies',
   },
 
   34: {
-    name: 'PRODUITS EN COURS',
+    name: 'WORK IN PROGRESS',
     description: 'Work in progress — manufactured products',
   },
-  341: { name: 'PRODUITS EN COURS', description: 'Products in progress' },
+  341: {
+    name: 'PRODUCTS IN PROGRESS',
+    description: 'Products in progress',
+  },
   3411: {
-    name: 'Produits en cours P1',
+    name: 'Products in progress P1',
     description: 'Products in progress — type P1',
   },
   3412: {
-    name: 'Produits en cours P2',
+    name: 'Products in progress P2',
     description: 'Products in progress — type P2',
   },
   342: {
-    name: 'TRAVAUX EN COURS',
+    name: 'WORK IN PROGRESS',
     description: 'Work in progress — construction/services',
   },
   3421: {
-    name: 'Travaux en cours T1',
+    name: 'Works in progress T1',
     description: 'Works in progress — type T1',
   },
   3422: {
-    name: 'Travaux en cours T2',
+    name: 'Works in progress T2',
     description: 'Works in progress — type T2',
   },
   343: {
-    name: 'PRODUITS INTERMÉDIAIRES EN COURS',
+    name: 'SEMI-FINISHED PRODUCTS IN PROGRESS',
     description: 'Semi-finished products in progress',
   },
   3431: {
-    name: 'Produits intermédiaires A',
+    name: 'Semi-finished products A in progress',
     description: 'Semi-finished products A in progress',
   },
   3432: {
-    name: 'Produits intermédiaires B',
+    name: 'Semi-finished products B in progress',
     description: 'Semi-finished products B in progress',
   },
   344: {
-    name: 'PRODUITS RÉSIDUELS EN COURS',
+    name: 'BY-PRODUCTS AND WASTE IN PROGRESS',
     description: 'By-products and waste in progress',
   },
   3441: {
-    name: 'Produits résiduels A',
+    name: 'By-products A in progress',
     description: 'By-products A in progress',
   },
   3442: {
-    name: 'Produits résiduels B',
+    name: 'By-products B in progress',
     description: 'By-products B in progress',
   },
 
   35: {
-    name: 'SERVICES EN COURS',
+    name: 'SERVICES IN PROGRESS',
     description:
       'Services in progress (work performed but not yet billed)',
   },
   351: {
-    name: 'ÉTUDES EN COURS',
+    name: 'STUDIES IN PROGRESS',
     description: 'Studies / consulting projects in progress',
   },
   3511: {
-    name: 'Études en cours E1',
+    name: 'Studies in progress E1',
     description: 'Studies in progress — type E1',
   },
   3512: {
-    name: 'Études en cours E2',
+    name: 'Studies in progress E2',
     description: 'Studies in progress — type E2',
   },
   352: {
-    name: 'PRESTATIONS DE SERVICES EN COURS',
+    name: 'SERVICE CONTRACTS IN PROGRESS',
     description: 'Service contracts in progress',
   },
   3521: {
-    name: 'Prestations de services S1',
+    name: 'Services in progress S1',
     description: 'Services in progress — type S1',
   },
   3522: {
-    name: 'Prestations de services S2',
+    name: 'Services in progress S2',
     description: 'Services in progress — type S2',
   },
 
-  36: { name: 'PRODUITS FINIS', description: 'Finished goods' },
+  36: { name: 'FINISHED GOODS', description: 'Finished goods' },
   361: {
-    name: 'PRODUITS FINIS A',
+    name: 'FINISHED GOODS A',
     description: 'Finished goods — category A',
   },
   362: {
-    name: 'PRODUITS FINIS B',
+    name: 'FINISHED GOODS B',
     description: 'Finished goods — category B',
   },
 
   37: {
-    name: 'PRODUITS INTERMÉDIAIRES ET RÉSIDUELS',
+    name: 'SEMI-FINISHED GOODS AND BY-PRODUCTS',
     description: 'Semi-finished goods and by-products',
   },
   371: {
-    name: 'PRODUITS INTERMÉDIAIRES',
+    name: 'SEMI-FINISHED / INTERMEDIATE PRODUCTS',
     description: 'Semi-finished / intermediate products',
   },
   3711: {
-    name: 'Produits intermédiaires A',
+    name: 'Intermediate products A',
     description: 'Intermediate products — category A',
   },
   3712: {
-    name: 'Produits intermédiaires B',
+    name: 'Intermediate products B',
     description: 'Intermediate products — category B',
   },
   372: {
-    name: 'PRODUITS RÉSIDUELS',
+    name: 'BY-PRODUCTS, WASTE AND SCRAP',
     description: 'By-products, waste and scrap',
   },
-  3721: { name: 'Déchets', description: 'Waste materials' },
-  3722: { name: 'Rebuts', description: 'Scrap / rejects' },
+  3721: { name: 'Waste materials', description: 'Waste materials' },
+  3722: { name: 'Scrap / rejects', description: 'Scrap / rejects' },
   3723: {
-    name: 'Matières de Récupération',
+    name: 'Recovered / recycled materials',
     description: 'Recovered / recycled materials',
   },
 
   38: {
-    name: 'STOCKS EN COURS DE ROUTE, EN CONSIGNATION OU EN DÉPÔT',
+    name: 'GOODS IN TRANSIT, ON CONSIGNMENT OR IN STORAGE',
     description: 'Goods in transit, on consignment or in storage',
   },
   381: {
-    name: 'MARCHANDISES EN COURS DE ROUTE',
+    name: 'MERCHANDISE IN TRANSIT',
     description: 'Merchandise in transit',
   },
   382: {
-    name: 'MATIÈRES PREMIÈRES ET FOURNITURES LIÉES EN COURS DE ROUTE',
+    name: 'RAW MATERIALS IN TRANSIT',
     description: 'Raw materials in transit',
   },
   383: {
-    name: 'AUTRES APPROVISIONNEMENTS EN COURS DE ROUTE',
+    name: 'OTHER SUPPLIES IN TRANSIT',
     description: 'Other supplies in transit',
   },
   386: {
-    name: 'PRODUITS FINIS EN COURS DE ROUTE',
+    name: 'FINISHED GOODS IN TRANSIT',
     description: 'Finished goods in transit',
   },
   387: {
-    name: 'STOCK EN CONSIGNATION OU EN DÉPÔT',
+    name: 'STOCK ON CONSIGNMENT OR IN STORAGE',
     description: 'Stock on consignment or in storage',
   },
   3871: {
-    name: 'Stock en consignation',
+    name: 'Stock held on consignment',
     description: 'Stock held on consignment',
   },
-  3872: { name: 'Stock en dépôt', description: 'Stock held in storage' },
+  3872: {
+    name: 'Stock held in storage',
+    description: 'Stock held in storage',
+  },
   388: {
-    name: "STOCK PROVENANT D'IMMOBILISATIONS MISES HORS SERVICE OU AU REBUT",
+    name: "STOCK ARISING FROM DECOMMISSIONED OR SCRAPPED FIXED ASSETS D'IMMOBILISATIONS MISES HORS SERVICE OU AU REBUT",
     description:
       'Stock arising from decommissioned or scrapped fixed assets',
   },
 
   39: {
-    name: 'DÉPRÉCIATIONS DES STOCKS',
+    name: 'IMPAIRMENT PROVISIONS ON INVENTORIES',
     description: 'Impairment provisions on inventories',
   },
   391: {
-    name: 'DÉPRÉCIATIONS DES STOCKS DE MARCHANDISES',
+    name: 'IMPAIRMENT',
     description: 'Impairment — merchandise stocks',
   },
   392: {
-    name: 'DÉPRÉCIATIONS DES STOCKS DE MATIÈRES PREMIÈRES ET FOURNITURES LIÉES',
+    name: 'IMPAIRMENT',
     description: 'Impairment — raw materials and related supplies',
   },
   393: {
-    name: "DÉPRÉCIATIONS DES STOCKS D'AUTRES APPROVISIONNEMENTS",
+    name: "IMPAIRMENT D'AUTRES APPROVISIONNEMENTS",
     description: 'Impairment — other supply stocks',
   },
   394: {
-    name: 'DÉPRÉCIATIONS DES PRODUCTIONS EN COURS',
+    name: 'IMPAIRMENT',
     description: 'Impairment — work in progress (products)',
   },
   395: {
-    name: 'DÉPRÉCIATIONS DES SERVICES EN COURS',
+    name: 'IMPAIRMENT',
     description: 'Impairment — services in progress',
   },
   396: {
-    name: 'DÉPRÉCIATIONS DES STOCKS DE PRODUITS FINIS',
+    name: 'IMPAIRMENT',
     description: 'Impairment — finished goods',
   },
   397: {
-    name: 'DÉPRÉCIATIONS DES STOCKS DE PRODUITS INTERMÉDIAIRES ET RÉSIDUELS',
+    name: 'IMPAIRMENT',
     description: 'Impairment — semi-finished goods and by-products',
   },
   398: {
-    name: 'DÉPRÉCIATIONS DES STOCKS EN COURS DE ROUTE, EN CONSIGNATION OU EN DÉPÔT',
+    name: 'IMPAIRMENT',
     description:
       'Impairment — stocks in transit, on consignment or in storage',
   },

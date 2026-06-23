@@ -1,7 +1,7 @@
 import type { Plan } from './types';
 
 /**
- * SYSCOHADA — CLASSE 2 : Comptes de l'actif immobilisé
+ * SYSCOHADA — CLASS 2: Fixed / Non-Current Assets
  * (Class 2: Fixed / Non-Current Assets)
  *
  * Covers: deferred charges, intangible assets, land, buildings,
@@ -11,1071 +11,1095 @@ import type { Plan } from './types';
  * Source: Official SYSCOHADA Chart of Accounts PDF, pages 11–20.
  */
 export const class2Accounts = {
-  // ────────── 20 CHARGES IMMOBILISÉES ──────────
+  // ────────── 20 DEFERRED CHARGES ──────────
   20: {
-    name: 'CHARGES IMMOBILISÉES',
+    name: 'DEFERRED CHARGES',
     description:
       'Deferred charges — capitalised start-up, restructuring and similar costs',
   },
   201: {
-    name: "FRAIS D'ÉTABLISSEMENT",
+    name: "START-UP / FORMATION COSTS D'ÉTABLISSEMENT",
     description: 'Start-up / formation costs',
   },
   2011: {
-    name: 'Frais de constitution',
+    name: 'Incorporation costs',
     description: 'Incorporation costs',
   },
   2012: {
-    name: 'Frais de prospection',
+    name: 'Prospecting / survey costs',
     description: 'Prospecting / survey costs',
   },
   2013: {
-    name: 'Frais de publicité et de lancement',
+    name: 'Advertising and launch costs',
     description: 'Advertising and launch costs',
   },
   2014: {
-    name: 'Frais de fonctionnement antérieurs au démarrage',
+    name: 'Pre-operating costs incurred before start of business',
     description: 'Pre-operating costs incurred before start of business',
   },
   2015: {
-    name: 'Frais de modification du capital (fusions, scissions, transformations)',
+    name: 'Capital restructuring costs (mergers, demergers, conversions)',
     description:
       'Capital restructuring costs (mergers, demergers, conversions)',
   },
   2016: {
-    name: "Frais d'entrée à la Bourse",
+    name: "Stock exchange listing costs'entrée à la Bourse",
     description: 'Stock exchange listing costs',
   },
   2017: {
-    name: 'Frais de restructuration',
+    name: 'Restructuring costs',
     description: 'Restructuring costs',
   },
   2018: {
-    name: "Frais divers d'établissement",
+    name: "Miscellaneous formation costs'établissement",
     description: 'Miscellaneous formation costs',
   },
   202: {
-    name: 'CHARGES À RÉPARTIR SUR PLUSIEURS EXERCICES',
+    name: 'CHARGES TO BE SPREAD OVER SEVERAL ACCOUNTING PERIODS',
     description: 'Charges to be spread over several accounting periods',
   },
-  2021: { name: 'Charges différées', description: 'Deferred charges' },
+  2021: { name: 'Deferred charges', description: 'Deferred charges' },
   2022: {
-    name: "Frais d'acquisition d'immobilisations",
+    name: "Fixed asset acquisition costs'acquisition d'immobilisations",
     description: 'Fixed asset acquisition costs',
   },
   2026: {
-    name: "Frais d'émission des emprunts",
+    name: "Bond issuance costs'émission des emprunts",
     description: 'Bond issuance costs',
   },
   2028: {
-    name: 'Charges à étaler',
+    name: 'Charges to be spread (other)',
     description: 'Charges to be spread (other)',
   },
   206: {
-    name: 'PRIMES DE REMBOURSEMENT DES OBLIGATIONS',
+    name: 'BOND REDEMPTION PREMIUMS',
     description:
       'Bond redemption premiums — excess of redemption value over issue value',
   },
   2061: {
-    name: 'Obligations ordinaires',
+    name: 'Redemption premiums',
     description: 'Redemption premiums — ordinary bonds',
   },
   2062: {
-    name: 'Obligations convertibles',
+    name: 'Redemption premiums',
     description: 'Redemption premiums — convertible bonds',
   },
   2068: {
-    name: 'Autres emprunts obligataires',
+    name: 'Redemption premiums',
     description: 'Redemption premiums — other bonds',
   },
 
-  // ────────── 21 IMMOBILISATIONS INCORPORELLES ──────────
+  // ────────── 21 INTANGIBLE ASSETS ──────────
   21: {
-    name: 'IMMOBILISATIONS INCORPORELLES',
+    name: 'INTANGIBLE ASSETS',
     description: 'Intangible assets',
   },
   211: {
-    name: 'FRAIS DE RECHERCHE ET DE DÉVELOPPEMENT',
+    name: 'RESEARCH AND DEVELOPMENT COSTS (CAPITALISED)',
     description: 'Research and development costs (capitalised)',
   },
   212: {
-    name: 'BREVETS, LICENCES, CONCESSIONS ET DROITS SIMILAIRES',
+    name: 'PATENTS, LICENCES, CONCESSIONS AND SIMILAR RIGHTS',
     description: 'Patents, licences, concessions and similar rights',
   },
-  213: { name: 'LOGICIELS', description: 'Software (computer programs)' },
-  214: { name: 'MARQUES', description: 'Trademarks and brand names' },
+  213: {
+    name: 'SOFTWARE (COMPUTER PROGRAMS)',
+    description: 'Software (computer programs)',
+  },
+  214: {
+    name: 'TRADEMARKS AND BRAND NAMES',
+    description: 'Trademarks and brand names',
+  },
   215: {
-    name: 'FONDS COMMERCIAL',
+    name: 'GOODWILL (BUSINESS VALUE / FONDS DE COMMERCE)',
     description: 'Goodwill (business value / fonds de commerce)',
   },
   216: {
-    name: 'DROIT AU BAIL',
+    name: 'LEASEHOLD RIGHTS (DROIT AU BAIL)',
     description: 'Leasehold rights (droit au bail)',
   },
   217: {
-    name: 'INVESTISSEMENTS DE CRÉATION',
+    name: 'CREATIVE / ARTISTIC INVESTMENTS',
     description: 'Creative / artistic investments',
   },
   218: {
-    name: 'AUTRES DROITS ET VALEURS INCORPORELS',
+    name: 'OTHER INTANGIBLE RIGHTS AND VALUES',
     description: 'Other intangible rights and values',
   },
   219: {
-    name: 'IMMOBILISATIONS INCORPORELLES EN COURS',
+    name: 'INTANGIBLE ASSETS UNDER CONSTRUCTION / DEVELOPMENT',
     description: 'Intangible assets under construction / development',
   },
   2191: {
-    name: 'Frais de recherche et de développement',
+    name: 'R&D in progress',
     description: 'R&D in progress',
   },
-  2193: { name: 'Logiciels', description: 'Software under development' },
+  2193: {
+    name: 'Software under development',
+    description: 'Software under development',
+  },
   2198: {
-    name: 'Autres droits et valeurs incorporels',
+    name: 'Other intangibles in progress',
     description: 'Other intangibles in progress',
   },
 
-  // ────────── 22 TERRAINS ──────────
-  22: { name: 'TERRAINS', description: 'Land' },
+  // ────────── 22 LAND ──────────
+  22: { name: 'LAND', description: 'Land' },
   221: {
-    name: 'TERRAINS AGRICOLES ET FORESTIERS',
+    name: 'AGRICULTURAL AND FORESTRY LAND',
     description: 'Agricultural and forestry land',
   },
   2211: {
-    name: "Terrains d'exploitation agricole",
+    name: "Agricultural operational land'exploitation agricole",
     description: 'Agricultural operational land',
   },
   2212: {
-    name: "Terrains d'exploitation forestière",
+    name: "Forestry operational land'exploitation forestière",
     description: 'Forestry operational land',
   },
   2218: {
-    name: 'Autres terrains',
+    name: 'Other land',
     description: 'Other agricultural/forestry land',
   },
-  222: { name: 'TERRAINS NUS', description: 'Bare / undeveloped land' },
+  222: {
+    name: 'BARE / UNDEVELOPED LAND',
+    description: 'Bare / undeveloped land',
+  },
   2221: {
-    name: 'Terrains à bâtir',
+    name: 'Building plots (land for development)',
     description: 'Building plots (land for development)',
   },
   2228: {
-    name: 'Autres terrains nus',
+    name: 'Other undeveloped land',
     description: 'Other undeveloped land',
   },
-  223: { name: 'TERRAINS BÂTIS', description: 'Land with buildings' },
+  223: { name: 'LAND WITH BUILDINGS', description: 'Land with buildings' },
   2231: {
-    name: 'pour bâtiments industriels et agricoles',
+    name: 'Land for industrial and agricultural buildings',
     description: 'Land for industrial and agricultural buildings',
   },
   2232: {
-    name: 'pour bâtiments administratifs et commerciaux',
+    name: 'Land for administrative and commercial buildings',
     description: 'Land for administrative and commercial buildings',
   },
   2234: {
-    name: 'pour bâtiments affectés aux autres opérations professionnelles',
+    name: 'Land for other professional use buildings',
     description: 'Land for other professional use buildings',
   },
   2235: {
-    name: 'pour bâtiments affectés aux autres opérations non professionnelles',
+    name: 'Land for non-professional use buildings',
     description: 'Land for non-professional use buildings',
   },
   2238: {
-    name: 'Autres terrains bâtis',
+    name: 'Other land with buildings',
     description: 'Other land with buildings',
   },
   224: {
-    name: 'TRAVAUX DE MISE EN VALEUR DES TERRAINS',
+    name: 'LAND DEVELOPMENT WORKS',
     description: 'Land development works',
   },
   2241: {
-    name: "Plantation d'arbres et d'arbustes",
+    name: "Tree and shrub planting works'arbres et d'arbustes",
     description: 'Tree and shrub planting works',
   },
   2248: {
-    name: 'Autres travaux',
+    name: 'Other land development works',
     description: 'Other land development works',
   },
   225: {
-    name: 'TERRAINS DE GISEMENT',
+    name: 'MINERAL / QUARRY LAND (EXTRACTIVE SITES)',
     description: 'Mineral / quarry land (extractive sites)',
   },
-  2251: { name: 'Carrières', description: 'Quarries' },
+  2251: { name: 'Quarries', description: 'Quarries' },
   226: {
-    name: 'TERRAINS AMÉNAGÉS',
+    name: 'DEVELOPED / IMPROVED LAND',
     description: 'Developed / improved land',
   },
-  2261: { name: 'Parkings', description: 'Car park land' },
+  2261: { name: 'Car park land', description: 'Car park land' },
   227: {
-    name: 'TERRAINS MIS EN CONCESSION',
+    name: 'LAND HELD UNDER CONCESSION',
     description: 'Land held under concession',
   },
-  228: { name: 'AUTRES TERRAINS', description: 'Other land' },
+  228: { name: 'OTHER LAND', description: 'Other land' },
   2281: {
-    name: 'Terrains des immeubles de rapport',
+    name: 'Land for rental property buildings',
     description: 'Land for rental property buildings',
   },
   2285: {
-    name: 'Terrains des logements affectés au personnel',
+    name: 'Land for staff accommodation',
     description: 'Land for staff accommodation',
   },
   2288: {
-    name: 'Autres terrains',
+    name: 'Other land',
     description: 'Other miscellaneous land',
   },
   229: {
-    name: 'AMÉNAGEMENTS DE TERRAINS EN COURS',
+    name: 'LAND IMPROVEMENTS UNDER CONSTRUCTION',
     description: 'Land improvements under construction',
   },
   2291: {
-    name: 'Terrains agricoles et forestiers',
+    name: 'Agricultural/forestry land improvements in progress',
     description: 'Agricultural/forestry land improvements in progress',
   },
   2292: {
-    name: 'Terrains nus',
+    name: 'Bare land improvements in progress',
     description: 'Bare land improvements in progress',
   },
   2295: {
-    name: 'Terrains de gisement',
+    name: 'Mineral land improvements in progress',
     description: 'Mineral land improvements in progress',
   },
   2298: {
-    name: 'Autres terrains',
+    name: 'Other land',
     description: 'Other land improvements in progress',
   },
 
-  // ────────── 23 BÂTIMENTS, INSTALLATIONS TECHNIQUES ET AGENCEMENTS ──────────
+  // ────────── 23 BUILDINGS, TECHNICAL INSTALLATIONS AND FIXTURES ──────────
   23: {
-    name: 'BÂTIMENTS, INSTALLATIONS TECHNIQUES ET AGENCEMENTS',
+    name: 'BUILDINGS, TECHNICAL INSTALLATIONS AND FITTINGS',
     description: 'Buildings, technical installations and fittings',
   },
   231: {
-    name: 'BÂTIMENTS INDUSTRIELS, AGRICOLES, ADMINISTRATIFS ET COMMERCIAUX SUR SOL PROPRE',
+    name: 'INDUSTRIAL, AGRICULTURAL, ADMINISTRATIVE AND COMMERCIAL BUILDINGS ON OWN LAND',
     description:
       'Industrial, agricultural, administrative and commercial buildings on own land',
   },
   2311: {
-    name: 'Bâtiments industriels',
+    name: 'Industrial buildings (own land)',
     description: 'Industrial buildings (own land)',
   },
   2312: {
-    name: 'Bâtiments agricoles',
+    name: 'Agricultural buildings (own land)',
     description: 'Agricultural buildings (own land)',
   },
   2313: {
-    name: 'Bâtiments administratifs et commerciaux',
+    name: 'Administrative and commercial buildings (own land)',
     description: 'Administrative and commercial buildings (own land)',
   },
   2314: {
-    name: 'Bâtiments affectés au logement du personnel',
+    name: 'Staff accommodation buildings (own land)',
     description: 'Staff accommodation buildings (own land)',
   },
   2315: {
-    name: 'Immeubles de rapport',
+    name: 'Rental investment property buildings (own land)',
     description: 'Rental investment property buildings (own land)',
   },
   232: {
-    name: "BÂTIMENTS INDUSTRIELS, AGRICOLES, ADMINISTRATIFS ET COMMERCIAUX SUR SOL D'AUTRUI",
+    name: "INDUSTRIAL, AGRICULTURAL, ADMINISTRATIVE AND COMMERCIAL BUILDINGS ON THIRD-PARTY LAND D'AUTRUI",
     description:
       'Industrial, agricultural, administrative and commercial buildings on third-party land',
   },
   2321: {
-    name: 'Bâtiments industriels',
+    name: 'Industrial buildings (third-party land)',
     description: 'Industrial buildings (third-party land)',
   },
   2322: {
-    name: 'Bâtiments agricoles',
+    name: 'Agricultural buildings (third-party land)',
     description: 'Agricultural buildings (third-party land)',
   },
   2323: {
-    name: 'Bâtiments administratifs et commerciaux',
+    name: 'Administrative and commercial buildings (third-party land)',
     description:
       'Administrative and commercial buildings (third-party land)',
   },
   2324: {
-    name: 'Bâtiments affectés au logement du personnel',
+    name: 'Staff accommodation buildings (third-party land)',
     description: 'Staff accommodation buildings (third-party land)',
   },
   2325: {
-    name: 'Immeubles de rapport',
+    name: 'Rental investment property buildings (third-party land)',
     description: 'Rental investment property buildings (third-party land)',
   },
   233: {
-    name: "OUVRAGES D'INFRASTRUCTURE",
+    name: "INFRASTRUCTURE WORKS D'INFRASTRUCTURE",
     description: 'Infrastructure works',
   },
-  2331: { name: 'Voies de terre', description: 'Roads and earthworks' },
-  2332: { name: 'Voies de fer', description: 'Railway infrastructure' },
-  2333: { name: "Voies d'eau", description: 'Waterways' },
-  2334: { name: 'Barrages, Digues', description: 'Dams and dikes' },
+  2331: {
+    name: 'Roads and earthworks',
+    description: 'Roads and earthworks',
+  },
+  2332: {
+    name: 'Railway infrastructure',
+    description: 'Railway infrastructure',
+  },
+  2333: { name: "Waterways'eau", description: 'Waterways' },
+  2334: { name: 'Dams and dikes', description: 'Dams and dikes' },
   2335: {
-    name: "Pistes d'aérodrome",
+    name: "Airfield runways and taxiways'aérodrome",
     description: 'Airfield runways and taxiways',
   },
-  2338: { name: 'Autres', description: 'Other infrastructure works' },
+  2338: { name: 'Other', description: 'Other infrastructure works' },
   234: {
-    name: 'INSTALLATIONS TECHNIQUES',
+    name: 'TECHNICAL INSTALLATIONS',
     description: 'Technical installations',
   },
   2341: {
-    name: 'Installations complexes spécialisées sur sol propre',
+    name: 'Specialised complex installations on own land',
     description: 'Specialised complex installations on own land',
   },
   2342: {
-    name: "Installations complexes spécialisées sur sol d'autrui",
+    name: "Specialised complex installations on third-party land'autrui",
     description: 'Specialised complex installations on third-party land',
   },
   2343: {
-    name: 'Installations à caractère spécifique sur sol propre',
+    name: 'Specific installations on own land',
     description: 'Specific installations on own land',
   },
   2344: {
-    name: "Installations à caractère spécifique sur sol d'autrui",
+    name: "Specific installations on third-party land'autrui",
     description: 'Specific installations on third-party land',
   },
   235: {
-    name: 'AMÉNAGEMENTS DE BUREAUX',
+    name: 'OFFICE FIT-OUTS AND FITTINGS',
     description: 'Office fit-outs and fittings',
   },
   2351: {
-    name: 'Installations générales',
+    name: 'General office installations',
     description: 'General office installations',
   },
-  2358: { name: 'Autres', description: 'Other office fittings' },
+  2358: { name: 'Other', description: 'Other office fittings' },
   237: {
-    name: 'BÂTIMENTS INDUSTRIELS, AGRICOLES ET COMMERCIAUX MIS EN CONCESSION',
+    name: 'INDUSTRIAL, AGRICULTURAL AND COMMERCIAL BUILDINGS HELD UNDER CONCESSION',
     description:
       'Industrial, agricultural and commercial buildings held under concession',
   },
   238: {
-    name: 'AUTRES INSTALLATIONS ET AGENCEMENTS',
+    name: 'OTHER INSTALLATIONS AND FITTINGS',
     description: 'Other installations and fittings',
   },
   239: {
-    name: 'BÂTIMENTS ET INSTALLATIONS EN COURS',
+    name: 'BUILDINGS AND INSTALLATIONS UNDER CONSTRUCTION',
     description: 'Buildings and installations under construction',
   },
 
-  // ────────── 24 MATÉRIEL ──────────
-  24: { name: 'MATÉRIEL', description: 'Equipment and machinery' },
+  // ────────── 24 EQUIPMENT AND MACHINERY ──────────
+  24: {
+    name: 'EQUIPMENT AND MACHINERY',
+    description: 'Equipment and machinery',
+  },
   241: {
-    name: 'MATÉRIEL ET OUTILLAGE INDUSTRIEL ET COMMERCIAL',
+    name: 'INDUSTRIAL AND COMMERCIAL MACHINERY AND TOOLS',
     description: 'Industrial and commercial machinery and tools',
   },
   2411: {
-    name: 'Matériel industriel',
+    name: 'Industrial machinery',
     description: 'Industrial machinery',
   },
-  2412: { name: 'Outillage industriel', description: 'Industrial tools' },
+  2412: { name: 'Industrial tools', description: 'Industrial tools' },
   2413: {
-    name: 'Matériel commercial',
+    name: 'Commercial equipment',
     description: 'Commercial equipment',
   },
-  2414: { name: 'Outillage commercial', description: 'Commercial tools' },
+  2414: { name: 'Commercial tools', description: 'Commercial tools' },
   242: {
-    name: 'MATÉRIEL ET OUTILLAGE AGRICOLE',
+    name: 'AGRICULTURAL EQUIPMENT AND TOOLS',
     description: 'Agricultural equipment and tools',
   },
   2421: {
-    name: 'Matériel agricole',
+    name: 'Agricultural machinery',
     description: 'Agricultural machinery',
   },
-  2422: { name: 'Outillage agricole', description: 'Agricultural tools' },
+  2422: { name: 'Agricultural tools', description: 'Agricultural tools' },
   243: {
-    name: "MATÉRIEL D'EMBALLAGE RÉCUPÉRABLE ET IDENTIFIABLE",
+    name: "RETURNABLE AND INDIVIDUALLY IDENTIFIABLE PACKAGING EQUIPMENT D'EMBALLAGE RÉCUPÉRABLE ET IDENTIFIABLE",
     description:
       'Returnable and individually identifiable packaging equipment',
   },
   244: {
-    name: 'MATÉRIEL ET MOBILIER',
+    name: 'OFFICE EQUIPMENT AND FURNITURE',
     description: 'Office equipment and furniture',
   },
-  2441: { name: 'Matériel de bureau', description: 'Office equipment' },
+  2441: { name: 'Office equipment', description: 'Office equipment' },
   2442: {
-    name: 'Matériel informatique',
+    name: 'Computer hardware and IT equipment',
     description: 'Computer hardware and IT equipment',
   },
   2443: {
-    name: 'Matériel bureautique',
+    name: 'Office machines (printers, copiers, etc.)',
     description: 'Office machines (printers, copiers, etc.)',
   },
-  2444: { name: 'Mobilier de bureau', description: 'Office furniture' },
+  2444: { name: 'Office furniture', description: 'Office furniture' },
   2446: {
-    name: 'Matériel et mobilier des immeubles de rapport',
+    name: 'Equipment and furniture in rental/investment buildings',
     description: 'Equipment and furniture in rental/investment buildings',
   },
   2447: {
-    name: 'Matériel et mobilier des logements du personnel',
+    name: 'Equipment and furniture in staff accommodation',
     description: 'Equipment and furniture in staff accommodation',
   },
   245: {
-    name: 'MATÉRIEL DE TRANSPORT',
+    name: 'TRANSPORT EQUIPMENT AND VEHICLES',
     description: 'Transport equipment and vehicles',
   },
-  2451: { name: 'Matériel automobile', description: 'Motor vehicles' },
+  2451: { name: 'Motor vehicles', description: 'Motor vehicles' },
   2452: {
-    name: 'Matériel ferroviaire',
+    name: 'Railway rolling stock',
     description: 'Railway rolling stock',
   },
   2453: {
-    name: 'Matériel fluvial, lagunaire',
+    name: 'River and lagoon watercraft',
     description: 'River and lagoon watercraft',
   },
-  2454: { name: 'Matériel naval', description: 'Sea-going vessels' },
-  2455: { name: 'Matériel aérien', description: 'Aircraft' },
+  2454: { name: 'Sea-going vessels', description: 'Sea-going vessels' },
+  2455: { name: 'Aircraft', description: 'Aircraft' },
   2456: {
-    name: 'Matériel hippomobile',
+    name: 'Horse-drawn vehicles',
     description: 'Horse-drawn vehicles',
   },
   2458: {
-    name: 'Autres (vélo, mobylette, moto)',
+    name: 'Other transport (bicycle, moped, motorcycle)',
     description: 'Other transport (bicycle, moped, motorcycle)',
   },
   246: {
-    name: 'IMMOBILISATIONS ANIMALES ET AGRICOLES',
+    name: 'BIOLOGICAL ASSETS',
     description:
       'Biological assets — animals and agricultural plantations',
   },
   2461: {
-    name: 'Cheptel, animaux de trait',
+    name: 'Draft animals / livestock (working animals)',
     description: 'Draft animals / livestock (working animals)',
   },
   2462: {
-    name: 'Cheptel, animaux reproducteurs',
+    name: 'Breeding livestock',
     description: 'Breeding livestock',
   },
-  2463: { name: 'Animaux de garde', description: 'Guard animals' },
+  2463: { name: 'Guard animals', description: 'Guard animals' },
   2465: {
-    name: 'Plantations agricoles',
+    name: 'Perennial agricultural plantations',
     description: 'Perennial agricultural plantations',
   },
-  2468: { name: 'Autres', description: 'Other biological assets' },
+  2468: { name: 'Other', description: 'Other biological assets' },
   247: {
-    name: 'AGENCEMENTS ET AMÉNAGEMENTS DU MATÉRIEL',
+    name: 'EQUIPMENT FITTINGS AND IMPROVEMENTS',
     description: 'Equipment fittings and improvements',
   },
-  248: { name: 'AUTRES MATÉRIELS', description: 'Other equipment' },
+  248: { name: 'OTHER EQUIPMENT', description: 'Other equipment' },
   2481: {
-    name: "Collections et œuvres d'art",
+    name: "Collections and works of art'art",
     description: 'Collections and works of art',
   },
   249: {
-    name: 'MATÉRIEL EN COURS',
+    name: 'EQUIPMENT UNDER CONSTRUCTION',
     description: 'Equipment under construction or acquisition',
   },
   2491: {
-    name: 'Matériel et outillage industriel et commercial',
+    name: 'Industrial and commercial equipment in progress',
     description: 'Industrial and commercial equipment in progress',
   },
   2492: {
-    name: 'Matériel et outillage agricole',
+    name: 'Agricultural equipment in progress',
     description: 'Agricultural equipment in progress',
   },
   2493: {
-    name: "Matériel d'emballage récupérable et identifiable",
+    name: "Returnable packaging equipment in progress'emballage récupérable et identifiable",
     description: 'Returnable packaging equipment in progress',
   },
   2494: {
-    name: 'Matériel et mobilier de bureau',
+    name: 'Office equipment and furniture in progress',
     description: 'Office equipment and furniture in progress',
   },
   2495: {
-    name: 'Matériel de transport',
+    name: 'Transport equipment in progress',
     description: 'Transport equipment in progress',
   },
   2496: {
-    name: 'Immobilisations animales et agricoles',
+    name: 'Biological assets in progress',
     description: 'Biological assets in progress',
   },
   2497: {
-    name: 'Agencements et aménagements du matériel',
+    name: 'Equipment fittings in progress',
     description: 'Equipment fittings in progress',
   },
   2498: {
-    name: 'Autres matériels',
+    name: 'Other equipment in progress',
     description: 'Other equipment in progress',
   },
 
-  // ────────── 25 AVANCES ET ACOMPTES VERSÉS SUR IMMOBILISATIONS ──────────
+  // ────────── 25 ADVANCES AND PAYMENTS ON ACCOUNT ON FIXED ASSETS ──────────
   25: {
-    name: 'AVANCES ET ACOMPTES VERSÉS SUR IMMOBILISATIONS',
+    name: 'ADVANCES AND DEPOSITS PAID ON FIXED ASSETS (PREPAYMENTS TO SUPPLIERS OF NON-CURRENT ASSETS)',
     description:
       'Advances and deposits paid on fixed assets (prepayments to suppliers of non-current assets)',
   },
   251: {
-    name: 'AVANCES ET ACOMPTES VERSÉS SUR IMMOBILISATIONS INCORPORELLES',
+    name: 'ADVANCES PAID ON INTANGIBLE ASSETS',
     description: 'Advances paid on intangible assets',
   },
   252: {
-    name: 'AVANCES ET ACOMPTES VERSÉS SUR IMMOBILISATIONS CORPORELLES',
+    name: 'ADVANCES PAID ON TANGIBLE ASSETS',
     description: 'Advances paid on tangible assets',
   },
 
-  // ────────── 26 TITRES DE PARTICIPATION ──────────
+  // ────────── 26 EQUITY PARTICIPATIONS ──────────
   26: {
-    name: 'TITRES DE PARTICIPATION',
+    name: 'EQUITY INVESTMENTS (SHAREHOLDINGS)',
     description:
       'Equity investments (shareholdings) — strategic long-term investments',
   },
   261: {
-    name: 'TITRES DE PARTICIPATION DANS DES SOCIÉTÉS SOUS CONTRÔLE EXCLUSIF',
+    name: 'EQUITY INVESTMENTS IN SUBSIDIARIES (EXCLUSIVE CONTROL)',
     description: 'Equity investments in subsidiaries (exclusive control)',
   },
   262: {
-    name: 'TITRES DE PARTICIPATION DANS DES SOCIÉTÉS SOUS CONTRÔLE CONJOINT',
+    name: 'EQUITY INVESTMENTS IN JOINTLY CONTROLLED ENTITIES',
     description: 'Equity investments in jointly controlled entities',
   },
   263: {
-    name: 'TITRES DE PARTICIPATION DANS DES SOCIÉTÉS CONFÉRANT UNE INFLUENCE NOTABLE',
+    name: 'EQUITY INVESTMENTS IN ASSOCIATES (SIGNIFICANT INFLUENCE)',
     description:
       'Equity investments in associates (significant influence)',
   },
   265: {
-    name: 'PARTICIPATIONS DANS DES ORGANISMES PROFESSIONNELS',
+    name: 'INTERESTS IN PROFESSIONAL ORGANISATIONS',
     description: 'Interests in professional organisations',
   },
   266: {
-    name: "PARTS DANS DES GROUPEMENTS D'INTÉRÊT ÉCONOMIQUE (G.I.E.)",
+    name: "INTERESTS IN ECONOMIC INTEREST GROUPS (EIG / GIE) D'INTÉRÊT ÉCONOMIQUE (G.I.E.)",
     description: 'Interests in Economic Interest Groups (EIG / GIE)',
   },
   268: {
-    name: 'AUTRES TITRES DE PARTICIPATION',
+    name: 'OTHER EQUITY INVESTMENT SECURITIES',
     description: 'Other equity investment securities',
   },
 
-  // ────────── 27 AUTRES IMMOBILISATIONS FINANCIÈRES ──────────
+  // ────────── 27 OTHER FINANCIAL ASSETS ──────────
   27: {
-    name: 'AUTRES IMMOBILISATIONS FINANCIÈRES',
+    name: 'OTHER LONG-TERM FINANCIAL ASSETS',
     description: 'Other long-term financial assets',
   },
   271: {
-    name: 'PRÊTS ET CRÉANCES NON COMMERCIALES',
+    name: 'LONG-TERM LOANS AND NON-TRADE RECEIVABLES',
     description: 'Long-term loans and non-trade receivables',
   },
   2711: {
-    name: 'Prêts participatifs',
+    name: 'Participating loans granted',
     description: 'Participating loans granted',
   },
   2712: {
-    name: 'Prêts aux associés',
+    name: 'Loans to shareholders/partners',
     description: 'Loans to shareholders/partners',
   },
   2713: {
-    name: 'Billets de fonds',
+    name: 'Business purchase notes receivable',
     description: 'Business purchase notes receivable',
   },
   2714: {
-    name: 'Titres prêtés',
+    name: 'Securities lent to third parties',
     description: 'Securities lent to third parties',
   },
-  272: { name: 'PRÊTS AU PERSONNEL', description: 'Loans to employees' },
+  272: { name: 'LOANS TO EMPLOYEES', description: 'Loans to employees' },
   2721: {
-    name: 'Prêts immobiliers',
+    name: 'Housing loans to employees',
     description: 'Housing loans to employees',
   },
   2722: {
-    name: "Prêts mobiliers et d'installation",
+    name: "Equipment and installation loans to employees'installation",
     description: 'Equipment and installation loans to employees',
   },
   2728: {
-    name: "Autres prêts (frais d'études…)",
+    name: "Other loans to employees (education, etc.)'études…)",
     description: 'Other loans to employees (education, etc.)',
   },
   273: {
-    name: "CRÉANCES SUR L'ÉTAT",
+    name: "LONG-TERM RECEIVABLES FROM THE STATE L'ÉTAT",
     description: 'Long-term receivables from the State',
   },
   2731: {
-    name: 'Retenues de garantie',
+    name: 'Guarantee retentions',
     description: 'Performance bond retentions receivable from the State',
   },
   2733: {
-    name: 'Fonds réglementé',
+    name: 'Regulated fund receivable',
     description: 'Regulated fund receivable',
   },
   2738: {
-    name: 'Autres',
+    name: 'Other',
     description: 'Other receivables from the State',
   },
   274: {
-    name: 'TITRES IMMOBILISÉS',
+    name: 'LONG-TERM INVESTMENT SECURITIES',
     description: 'Long-term investment securities (non-controlling)',
   },
   2741: {
-    name: "Titres immobilisés de l'activité de portefeuille (T.I.A.P.)",
+    name: "Portfolio investment securities (TIAP)'activité de portefeuille (T.I.A.P.)",
     description: 'Portfolio investment securities (TIAP)',
   },
   2742: {
-    name: 'Titres participatifs',
+    name: 'Participating securities (non-voting bonds)',
     description: 'Participating securities (non-voting bonds)',
   },
   2743: {
-    name: "Certificats d'investissement",
+    name: "Investment certificates'investissement",
     description: 'Investment certificates',
   },
   2744: {
-    name: 'Parts de fonds commun de placement (F.C.P.)',
+    name: 'Mutual fund units (FCP)',
     description: 'Mutual fund units (FCP)',
   },
   2748: {
-    name: 'Autres titres immobilisés',
+    name: 'Other long-term investment securities',
     description: 'Other long-term investment securities',
   },
   275: {
-    name: 'DÉPÔTS ET CAUTIONNEMENTS VERSÉS',
+    name: 'DEPOSITS AND SURETIES PAID (LONG-TERM)',
     description: 'Deposits and sureties paid (long-term)',
   },
   2751: {
-    name: "Dépôts pour loyers d'avance",
+    name: "Rental deposits paid'avance",
     description: 'Rental deposits paid',
   },
   2752: {
-    name: "Dépôts pour l'électricité",
+    name: "Electricity deposits paid'électricité",
     description: 'Electricity deposits paid',
   },
-  2753: { name: "Dépôts pour l'eau", description: 'Water deposits paid' },
-  2754: { name: 'Dépôts pour le gaz', description: 'Gas deposits paid' },
+  2753: {
+    name: "Water deposits paid'eau",
+    description: 'Water deposits paid',
+  },
+  2754: { name: 'Gas deposits paid', description: 'Gas deposits paid' },
   2755: {
-    name: 'Dépôts pour le téléphone, le télex, la télécopie',
+    name: 'Telephone and telecoms deposits paid',
     description: 'Telephone and telecoms deposits paid',
   },
   2756: {
-    name: 'Cautionnements sur marchés publics',
+    name: 'Public contract sureties paid',
     description: 'Public contract sureties paid',
   },
   2757: {
-    name: 'Cautionnements sur autres opérations',
+    name: 'Other sureties paid',
     description: 'Other sureties paid',
   },
   2758: {
-    name: 'Autres dépôts et cautionnements',
+    name: 'Other deposits and sureties paid',
     description: 'Other deposits and sureties paid',
   },
   276: {
-    name: 'INTÉRÊTS COURUS',
+    name: 'ACCRUED INTEREST',
     description: 'Accrued interest on long-term financial assets',
   },
   2761: {
-    name: 'Prêts et créances non commerciales',
+    name: 'Accrued interest on non-trade loans',
     description: 'Accrued interest on non-trade loans',
   },
   2762: {
-    name: 'Prêts au personnel',
+    name: 'Accrued interest on employee loans',
     description: 'Accrued interest on employee loans',
   },
   2763: {
-    name: "Créances sur l'Etat",
+    name: "Accrued interest on State receivables'Etat",
     description: 'Accrued interest on State receivables',
   },
   2764: {
-    name: 'Titres immobilisés',
+    name: 'Accrued interest on long-term securities',
     description: 'Accrued interest on long-term securities',
   },
   2765: {
-    name: 'Dépôts et cautionnements versés',
+    name: 'Accrued interest on deposits paid',
     description: 'Accrued interest on deposits paid',
   },
   2767: {
-    name: 'Créances rattachées à des participations',
+    name: 'Accrued interest on participation-related receivables',
     description: 'Accrued interest on participation-related receivables',
   },
   2768: {
-    name: 'Immobilisations financières diverses',
+    name: 'Accrued interest on other long-term financial assets',
     description: 'Accrued interest on other long-term financial assets',
   },
   277: {
-    name: 'CRÉANCES RATTACHÉES À DES PARTICIPATIONS ET AVANCES À DES G.I.E.',
+    name: 'RECEIVABLES RELATED TO EQUITY INVESTMENTS AND ADVANCES TO GIE',
     description:
       'Receivables related to equity investments and advances to GIE',
   },
   2771: {
-    name: 'Créances rattachées à des participations (groupe)',
+    name: 'Intra-group participation receivables',
     description: 'Intra-group participation receivables',
   },
   2772: {
-    name: 'Créances rattachées à des participations (hors groupe)',
+    name: 'Non-group participation receivables',
     description: 'Non-group participation receivables',
   },
   2773: {
-    name: 'Créances rattachées à des sociétés en participation',
+    name: 'Receivables from joint venture entities',
     description: 'Receivables from joint venture entities',
   },
   2774: {
-    name: "Avances à des Groupements d'intérêt économique (G.I.E.)",
+    name: "Advances to Economic Interest Groups'intérêt économique (G.I.E.)",
     description: 'Advances to Economic Interest Groups',
   },
   278: {
-    name: 'IMMOBILISATIONS FINANCIÈRES DIVERSES',
+    name: 'MISCELLANEOUS LONG-TERM FINANCIAL ASSETS',
     description: 'Miscellaneous long-term financial assets',
   },
   2781: {
-    name: 'Créances diverses groupe',
+    name: 'Miscellaneous intra-group receivables',
     description: 'Miscellaneous intra-group receivables',
   },
   2782: {
-    name: 'Créances divers hors groupe',
+    name: 'Miscellaneous non-group receivables',
     description: 'Miscellaneous non-group receivables',
   },
   2785: {
-    name: 'Or et métaux précieux',
+    name: 'Gold and precious metals held as financial assets',
     description: 'Gold and precious metals held as financial assets',
   },
 
-  // ────────── 28 AMORTISSEMENTS ──────────
+  // ────────── 28 DEPRECIATION ──────────
   28: {
-    name: 'AMORTISSEMENTS',
+    name: 'DEPRECIATION',
     description:
       'Accumulated depreciation on fixed assets (contra account)',
   },
   281: {
-    name: 'AMORTISSEMENTS DES IMMOBILISATIONS INCORPORELLES',
+    name: 'ACCUMULATED DEPRECIATION',
     description: 'Accumulated depreciation — intangible assets',
   },
   2811: {
-    name: 'Amortissements des frais de recherche et de développement',
+    name: 'Depreciation',
     description: 'Depreciation — R&D costs',
   },
   2812: {
-    name: 'Amortissements des brevets, licences, concessions et droits similaires',
+    name: 'Depreciation',
     description: 'Depreciation — patents, licences and similar rights',
   },
   2813: {
-    name: 'Amortissements des logiciels',
+    name: 'Depreciation',
     description: 'Depreciation — software',
   },
   2814: {
-    name: 'Amortissements des marques',
+    name: 'Depreciation',
     description: 'Depreciation — trademarks',
   },
   2815: {
-    name: 'Amortissements du fonds commercial',
+    name: 'Amortisation',
     description: 'Amortisation — goodwill',
   },
   2816: {
-    name: 'Amortissements du droit au bail',
+    name: 'Amortisation',
     description: 'Amortisation — leasehold rights',
   },
   2817: {
-    name: 'Amortissements des investissements de création',
+    name: 'Depreciation',
     description: 'Depreciation — creative investments',
   },
   2818: {
-    name: 'Amortissements des autres droits et valeurs incorporels',
+    name: 'Depreciation',
     description: 'Depreciation — other intangibles',
   },
   282: {
-    name: 'AMORTISSEMENTS DES TERRAINS',
+    name: 'ACCUMULATED DEPRECIATION',
     description:
       'Accumulated depreciation — land (extractive/development sites)',
   },
   2821: {
-    name: 'Amortissements des terrains agricoles et forestiers',
+    name: 'Depreciation',
     description: 'Depreciation — agricultural/forestry land',
   },
   2824: {
-    name: 'Amortissements des travaux de mise en valeur des terrains',
+    name: 'Depreciation',
     description: 'Depreciation — land development works',
   },
   2825: {
-    name: 'Amortissements des terrains de gisement',
+    name: 'Depreciation',
     description: 'Depreciation — mineral/quarry land',
   },
   283: {
-    name: 'AMORTISSEMENTS DES BÂTIMENTS, INSTALLATIONS TECHNIQUES ET AGENCEMENTS',
+    name: 'ACCUMULATED DEPRECIATION',
     description:
       'Accumulated depreciation — buildings, installations and fittings',
   },
   2831: {
-    name: 'Amortissements des bâtiments industriels, agricoles, administratifs et commerciaux sur sol propre',
+    name: 'Depreciation',
     description: 'Depreciation — buildings on own land',
   },
   2832: {
-    name: "Amortissements des bâtiments industriels, agricoles, administratifs et commerciaux sur sol d'autrui",
+    name: "Depreciation'autrui",
     description: 'Depreciation — buildings on third-party land',
   },
   2833: {
-    name: "Amortissements des ouvrages d'infrastructure",
+    name: "Depreciation'infrastructure",
     description: 'Depreciation — infrastructure works',
   },
   2834: {
-    name: 'Amortissements des installations techniques',
+    name: 'Depreciation',
     description: 'Depreciation — technical installations',
   },
   2835: {
-    name: 'Amortissements des aménagements de bureaux',
+    name: 'Depreciation',
     description: 'Depreciation — office fittings',
   },
   2837: {
-    name: 'Amortissements des bâtiments industriels, agricoles et commerciaux mis en concession',
+    name: 'Depreciation',
     description: 'Depreciation — concession buildings',
   },
   2838: {
-    name: 'Amortissements des autres installations et agencements',
+    name: 'Depreciation',
     description: 'Depreciation — other installations and fittings',
   },
   284: {
-    name: 'AMORTISSEMENTS DU MATÉRIEL',
+    name: 'ACCUMULATED DEPRECIATION',
     description: 'Accumulated depreciation — equipment',
   },
   2841: {
-    name: 'Amortissements du matériel et outillage industriel et commercial',
+    name: 'Depreciation',
     description: 'Depreciation — industrial and commercial equipment',
   },
   2842: {
-    name: 'Amortissements du matériel et outillage agricole',
+    name: 'Depreciation',
     description: 'Depreciation — agricultural equipment',
   },
   2843: {
-    name: "Amortissements du matériel d'emballage récupérable et identifiable",
+    name: "Depreciation'emballage récupérable et identifiable",
     description: 'Depreciation — returnable packaging',
   },
   2844: {
-    name: 'Amortissements du matériel et mobilier',
+    name: 'Depreciation',
     description: 'Depreciation — office equipment and furniture',
   },
   2845: {
-    name: 'Amortissements du matériel de transport',
+    name: 'Depreciation',
     description: 'Depreciation — vehicles and transport equipment',
   },
   2846: {
-    name: 'Amortissements des immobilisations animales et agricoles',
+    name: 'Depreciation',
     description: 'Depreciation — biological assets',
   },
   2847: {
-    name: 'Amortissements des agencements et aménagements du matériel',
+    name: 'Depreciation',
     description: 'Depreciation — equipment fittings',
   },
   2848: {
-    name: 'Amortissements des autres matériels',
+    name: 'Depreciation',
     description: 'Depreciation — other equipment',
   },
 
-  // ────────── 29 PROVISIONS POUR DÉPRÉCIATION ──────────
+  // ────────── 29 IMPAIRMENT OF FIXED ASSETS ──────────
   29: {
-    name: 'PROVISIONS POUR DÉPRÉCIATION',
+    name: 'IMPAIRMENT PROVISIONS ON FIXED ASSETS (CONTRA ACCOUNT)',
     description: 'Impairment provisions on fixed assets (contra account)',
   },
   291: {
-    name: 'PROVISIONS POUR DÉPRÉCIATION DES IMMOBILISATIONS INCORPORELLES',
+    name: 'IMPAIRMENT PROVISIONS',
     description: 'Impairment provisions — intangible assets',
   },
   2912: {
-    name: 'Provisions pour dépréciation des brevets, licences, concessions et droits similaires',
+    name: 'Impairment',
     description: 'Impairment — patents and licences',
   },
   2913: {
-    name: 'Provisions pour dépréciation des logiciels',
+    name: 'Impairment',
     description: 'Impairment — software',
   },
   2914: {
-    name: 'Provisions pour dépréciation des marques',
+    name: 'Impairment',
     description: 'Impairment — trademarks',
   },
   2915: {
-    name: 'Provisions pour dépréciation du fonds commercial',
+    name: 'Impairment',
     description: 'Impairment — goodwill',
   },
   2916: {
-    name: 'Provisions pour dépréciation du droit au bail',
+    name: 'Impairment',
     description: 'Impairment — leasehold rights',
   },
   2917: {
-    name: 'Provisions pour dépréciation des investissements de création',
+    name: 'Impairment',
     description: 'Impairment — creative investments',
   },
   2918: {
-    name: 'Provisions pour dépréciation des autres droits et valeurs incorporels',
+    name: 'Impairment',
     description: 'Impairment — other intangibles',
   },
   2919: {
-    name: 'Provisions pour dépréciation des immobilisations incorporelles en cours',
+    name: 'Impairment',
     description: 'Impairment — intangibles under development',
   },
   292: {
-    name: 'PROVISIONS POUR DÉPRÉCIATION DES TERRAINS',
+    name: 'IMPAIRMENT PROVISIONS',
     description: 'Impairment provisions — land',
   },
   2921: {
-    name: 'Provisions pour dépréciation des terrains agricoles et forestiers',
+    name: 'Impairment',
     description: 'Impairment — agricultural/forestry land',
   },
   2922: {
-    name: 'Provisions pour dépréciation des terrains nus',
+    name: 'Impairment',
     description: 'Impairment — undeveloped land',
   },
   2923: {
-    name: 'Provisions pour dépréciation des terrains bâtis',
+    name: 'Impairment',
     description: 'Impairment — land with buildings',
   },
   2924: {
-    name: 'Provisions pour dépréciation des travaux de mise en valeur des terrains',
+    name: 'Impairment',
     description: 'Impairment — land development works',
   },
   2925: {
-    name: 'Provisions pour dépréciation des terrains de gisement',
+    name: 'Impairment',
     description: 'Impairment — mineral/quarry land',
   },
   2926: {
-    name: 'Provisions pour dépréciation des terrains aménagés',
+    name: 'Impairment',
     description: 'Impairment — improved land',
   },
   2927: {
-    name: 'Provisions pour dépréciation des terrains mis en concession',
+    name: 'Impairment',
     description: 'Impairment — concession land',
   },
   2928: {
-    name: 'Provisions pour dépréciation des autres terrains',
+    name: 'Impairment',
     description: 'Impairment — other land',
   },
   2929: {
-    name: 'Provisions pour dépréciation des aménagements de terrains en cours',
+    name: 'Impairment',
     description: 'Impairment — land improvements in progress',
   },
   293: {
-    name: 'PROVISIONS POUR DÉPRÉCIATION DES BÂTIMENTS, INSTALLATIONS TECHNIQUES ET AGENCEMENTS',
+    name: 'IMPAIRMENT PROVISIONS',
     description: 'Impairment provisions — buildings and installations',
   },
   2931: {
-    name: 'Provisions pour dépréciation des bâtiments industriels, agricoles, administratifs et commerciaux sur sol propre',
+    name: 'Impairment',
     description: 'Impairment — buildings on own land',
   },
   2932: {
-    name: "Provisions pour dépréciation des bâtiments industriels, agricoles, administratifs et commerciaux sur sol d'autrui",
+    name: "Impairment'autrui",
     description: 'Impairment — buildings on third-party land',
   },
   2933: {
-    name: "Provisions pour dépréciation des ouvrages d'infrastructures",
+    name: "Impairment'infrastructures",
     description: 'Impairment — infrastructure works',
   },
   2934: {
-    name: 'Provisions pour dépréciation des installations techniques',
+    name: 'Impairment',
     description: 'Impairment — technical installations',
   },
   2935: {
-    name: 'Provisions pour dépréciation des aménagements de bureaux',
+    name: 'Impairment',
     description: 'Impairment — office fittings',
   },
   2937: {
-    name: 'Provisions pour dépréciation des bâtiments industriels, agricoles et commerciaux mis en concession',
+    name: 'Impairment',
     description: 'Impairment — concession buildings',
   },
   2938: {
-    name: 'Provisions pour dépréciation des autres installations et agencements',
+    name: 'Impairment',
     description: 'Impairment — other installations',
   },
   2939: {
-    name: 'Provisions pour dépréciation des bâtiments et installations en cours',
+    name: 'Impairment',
     description: 'Impairment — buildings under construction',
   },
   294: {
-    name: 'PROVISIONS POUR DÉPRÉCIATION DE MATÉRIEL',
+    name: 'IMPAIRMENT PROVISIONS',
     description: 'Impairment provisions — equipment',
   },
   2941: {
-    name: 'Provisions pour dépréciation du matériel et outillage industriel et commercial',
+    name: 'Impairment',
     description: 'Impairment — industrial equipment',
   },
   2942: {
-    name: 'Provisions pour dépréciation du matériel et outillage agricole',
+    name: 'Impairment',
     description: 'Impairment — agricultural equipment',
   },
   2943: {
-    name: "Provisions pour dépréciation du matériel d'emballage récupérable et identifiable",
+    name: "Impairment'emballage récupérable et identifiable",
     description: 'Impairment — returnable packaging',
   },
   2944: {
-    name: 'Provisions pour dépréciation du matériel et mobilier',
+    name: 'Impairment',
     description: 'Impairment — office equipment and furniture',
   },
   2945: {
-    name: 'Provisions pour dépréciation du matériel de transport',
+    name: 'Impairment',
     description: 'Impairment — transport equipment',
   },
   2946: {
-    name: 'Provisions pour dépréciation des immobilisations animales et agricoles',
+    name: 'Impairment',
     description: 'Impairment — biological assets',
   },
   2947: {
-    name: 'Provisions pour dépréciation des agencements et aménagements du matériel',
+    name: 'Impairment',
     description: 'Impairment — equipment fittings',
   },
   2948: {
-    name: 'Provisions pour dépréciation des autres matériels',
+    name: 'Impairment',
     description: 'Impairment — other equipment',
   },
   2949: {
-    name: 'Provisions pour dépréciation de matériel en cours',
+    name: 'Impairment',
     description: 'Impairment — equipment under acquisition',
   },
   295: {
-    name: 'PROVISIONS POUR DÉPRÉCIATION DES AVANCES ET ACOMPTES VERSÉS SUR IMMOBILISATIONS',
+    name: 'IMPAIRMENT PROVISIONS',
     description: 'Impairment provisions — advances on fixed assets',
   },
   2951: {
-    name: 'Provisions pour dépréciation des avances et acomptes versés sur immobilisations incorporelles',
+    name: 'Impairment',
     description: 'Impairment — advances on intangibles',
   },
   2952: {
-    name: 'Provisions pour dépréciation des avances et acomptes versés sur immobilisations corporelles',
+    name: 'Impairment',
     description: 'Impairment — advances on tangibles',
   },
   296: {
-    name: 'PROVISIONS POUR DÉPRÉCIATION DES TITRES DE PARTICIPATION',
+    name: 'IMPAIRMENT PROVISIONS',
     description: 'Impairment provisions — equity investments',
   },
   2961: {
-    name: 'Provisions pour dépréciation des titres de participation dans des sociétés sous contrôle exclusif',
+    name: 'Impairment',
     description: 'Impairment — subsidiary investments',
   },
   2962: {
-    name: 'Provisions pour dépréciation des titres de participation dans les sociétés sous contrôle conjoint',
+    name: 'Impairment',
     description: 'Impairment — joint venture investments',
   },
   2963: {
-    name: 'Provisions pour dépréciation des titres de participation dans les sociétés conférant une influence notable',
+    name: 'Impairment',
     description: 'Impairment — associate investments',
   },
   2965: {
-    name: 'Provisions pour dépréciation des participations dans des organismes professionnels',
+    name: 'Impairment',
     description: 'Impairment — professional organisation interests',
   },
   2966: {
-    name: 'Provisions pour dépréciation des parts dans des GIE',
+    name: 'Impairment',
     description: 'Impairment — GIE interests',
   },
   2968: {
-    name: 'Provisions pour dépréciation des autres titres de participation',
+    name: 'Impairment',
     description: 'Impairment — other equity investments',
   },
   297: {
-    name: 'PROVISIONS POUR DÉPRÉCIATION DES AUTRES IMMOBILISATIONS FINANCIÈRES',
+    name: 'IMPAIRMENT PROVISIONS',
     description:
       'Impairment provisions — other long-term financial assets',
   },
   2971: {
-    name: 'Provisions pour dépréciation des prêts et créances non commerciales',
+    name: 'Impairment',
     description: 'Impairment — non-trade loans',
   },
   2972: {
-    name: 'Provisions pour dépréciation des prêts au personnel',
+    name: 'Impairment',
     description: 'Impairment — employee loans',
   },
   2973: {
-    name: "Provisions pour dépréciation des créances sur l'Etat",
+    name: "Impairment'Etat",
     description: 'Impairment — State receivables',
   },
   2974: {
-    name: 'Provisions pour dépréciation des titres immobilisés',
+    name: 'Impairment',
     description: 'Impairment — long-term securities',
   },
   2975: {
-    name: 'Provisions pour dépréciation des dépôts et cautionnements versés',
+    name: 'Impairment',
     description: 'Impairment — deposits paid',
   },
   2977: {
-    name: 'Provisions pour dépréciation des créances rattachées à des participations et avances à des GIE',
+    name: 'Impairment',
     description: 'Impairment — participation receivables',
   },
   2978: {
-    name: 'Provisions pour dépréciation des créances financières diverses',
+    name: 'Impairment',
     description: 'Impairment — miscellaneous financial receivables',
   },
 } as const satisfies Plan;

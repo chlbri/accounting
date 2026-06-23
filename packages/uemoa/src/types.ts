@@ -12,7 +12,7 @@
  * A single account entry in the SYSCOHADA chart of accounts.
  */
 export type Account = {
-  /** The French name of the account (as defined in the official plan) */
+  /** English name of the account */
   name: string;
   /** English description / translation of the account */
   description: string;

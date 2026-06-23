@@ -28,8 +28,8 @@ const account = accountPlan[10];
   codes.
 - **Strongly Typed**: Provides `AccountCode` union type matching all valid
   account codes.
-- **Dual Language**: Each account features its official French `name` and
-  English `description`.
+- **English Names & Descriptions**: Each account features its English
+  `name` and English `description`.
 
 <br/>
 

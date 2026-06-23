@@ -11,7 +11,7 @@
  * import { accountPlan } from '@bemedev/accounting-uemoa';
  *
  * const account = accountPlan[6011];
- * // { name: 'dans la Région', description: 'Merchandise purchases within the UEMOA region' }
+ * // { name: 'within the Region', description: 'Merchandise purchases within the UEMOA region' }
  * ```
  *
  * @see https://www.ohada.com/

@@ -78,7 +78,7 @@ export const AccountsTable: Component<Props> = props => {
                 <Show when={showClass}>
                   <th class='px-4 py-3 text-left'>Class</th>
                 </Show>
-                <th class='px-4 py-3 text-left min-w-48'>Name (FR)</th>
+                <th class='px-4 py-3 text-left min-w-48'>Name (EN)</th>
                 <th class='px-4 py-3 text-left'>Description (EN)</th>
               </tr>
             </thead>

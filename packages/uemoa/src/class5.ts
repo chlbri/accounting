@@ -1,5 +1,5 @@
 /**
- * SYSCOHADA — CLASSE 5 : Comptes de trésorerie
+ * SYSCOHADA — CLASS 5: Cash and Treasury Accounts
  * (Class 5: Cash and Treasury Accounts)
  *
  * Covers: short-term investments, bills receivable, bank accounts,
@@ -11,342 +11,351 @@
 import type { Plan } from './types';
 
 export const class5Accounts = {
-  // ────────── 50 TITRES DE PLACEMENT ──────────
+  // ────────── 50 SHORT-TERM INVESTMENTS ──────────
   50: {
-    name: 'TITRES DE PLACEMENT',
+    name: 'SHORT-TERM INVESTMENTS',
     description:
       'Short-term investment securities (marketable securities)',
   },
   501: {
-    name: 'TITRES DU TRÉSOR ET BONS DE CAISSE À COURT TERME',
+    name: 'TREASURY BILLS AND SHORT-TERM CERTIFICATES OF DEPOSIT',
     description: 'Treasury bills and short-term certificates of deposit',
   },
   5011: {
-    name: 'Titres du Trésor à court terme',
+    name: 'Short-term Treasury bills',
     description: 'Short-term Treasury bills',
   },
   5012: {
-    name: "Titres d'organismes financiers",
+    name: "Financial institution short-term securities'organismes financiers",
     description: 'Financial institution short-term securities',
   },
   5013: {
-    name: 'Bons de caisse à court terme',
+    name: 'Short-term cash vouchers / certificates',
     description: 'Short-term cash vouchers / certificates',
   },
   502: {
-    name: 'ACTIONS',
+    name: 'SHARES HELD AS SHORT-TERM INVESTMENTS',
     description: 'Shares held as short-term investments',
   },
   5021: {
-    name: 'Actions propres',
+    name: 'Own shares (treasury shares)',
     description: 'Own shares (treasury shares)',
   },
   5022: {
-    name: 'Actions cotées',
+    name: 'Listed shares held for trading',
     description: 'Listed shares held for trading',
   },
   5023: {
-    name: 'Actions non cotées',
+    name: 'Unlisted shares held for trading',
     description: 'Unlisted shares held for trading',
   },
   5024: {
-    name: "Actions démembrées (certificats d'investissement ; droits de vote)",
+    name: "Split shares'investissement ; droits de vote)",
     description:
       'Split shares — investment certificates and voting rights',
   },
   5025: {
-    name: 'Autres titres conférant un droit de propriété',
+    name: 'Other equity-type securities',
     description: 'Other equity-type securities',
   },
   503: {
-    name: 'OBLIGATIONS',
+    name: 'BONDS HELD AS SHORT-TERM INVESTMENTS',
     description: 'Bonds held as short-term investments',
   },
   5031: {
-    name: 'Obligations émises par la société et rachetées par elle',
+    name: 'Own bonds repurchased by the company',
     description: 'Own bonds repurchased by the company',
   },
   5032: {
-    name: 'Obligations cotées',
+    name: 'Listed bonds held for trading',
     description: 'Listed bonds held for trading',
   },
   5033: {
-    name: 'Obligations non cotées',
+    name: 'Unlisted bonds held for trading',
     description: 'Unlisted bonds held for trading',
   },
   5035: {
-    name: 'Autres titres conférant un droit de créance',
+    name: 'Other debt securities held for trading',
     description: 'Other debt securities held for trading',
   },
   504: {
-    name: 'BONS DE SOUSCRIPTION',
+    name: 'SUBSCRIPTION WARRANTS',
     description: 'Subscription warrants',
   },
   5042: {
-    name: "Bons de souscription d'actions",
+    name: "Share subscription warrants'actions",
     description: 'Share subscription warrants',
   },
   5043: {
-    name: "Bons de souscription d'obligations",
+    name: "Bond subscription warrants'obligations",
     description: 'Bond subscription warrants',
   },
   505: {
-    name: 'TITRES NÉGOCIABLES HORS RÉGION',
+    name: 'NEGOTIABLE SECURITIES FROM OUTSIDE THE UEMOA REGION',
     description: 'Negotiable securities from outside the UEMOA region',
   },
   506: {
-    name: 'INTÉRÊTS COURUS',
+    name: 'ACCRUED INTEREST',
     description: 'Accrued interest on short-term investment securities',
   },
   5061: {
-    name: 'Titres du Trésor et bons de caisse à court terme',
+    name: 'Accrued interest on Treasury bills',
     description: 'Accrued interest on Treasury bills',
   },
-  5062: { name: 'Actions', description: 'Accrued dividends on shares' },
-  5063: { name: 'Obligations', description: 'Accrued interest on bonds' },
+  5062: {
+    name: 'Accrued dividends on shares',
+    description: 'Accrued dividends on shares',
+  },
+  5063: {
+    name: 'Accrued interest on bonds',
+    description: 'Accrued interest on bonds',
+  },
   508: {
-    name: 'AUTRES VALEURS ASSIMILÉES',
+    name: 'OTHER EQUIVALENT MARKETABLE VALUES',
     description: 'Other equivalent marketable values',
   },
 
-  // ────────── 51 VALEURS À ENCAISSER ──────────
+  // ────────── 51 VALUES PENDING COLLECTION ──────────
   51: {
-    name: 'VALEURS À ENCAISSER',
+    name: 'VALUES PENDING COLLECTION',
     description:
       'Values pending collection (bills and cheques not yet cleared)',
   },
   511: {
-    name: 'EFFETS À ENCAISSER',
+    name: 'BILLS PENDING COLLECTION',
     description: 'Bills of exchange to collect (held in portfolio)',
   },
   512: {
-    name: "EFFETS À L'ENCAISSEMENT",
+    name: "BILLS SUBMITTED TO BANK FOR COLLECTION (IN TRANSIT) L'ENCAISSEMENT",
     description: 'Bills submitted to bank for collection (in transit)',
   },
   513: {
-    name: 'CHÈQUES À ENCAISSER',
+    name: 'CHEQUES RECEIVED BUT NOT YET DEPOSITED',
     description: 'Cheques received but not yet deposited',
   },
   514: {
-    name: "CHÈQUES À L'ENCAISSEMENT",
+    name: "CHEQUES DEPOSITED BUT NOT YET CLEARED L'ENCAISSEMENT",
     description: 'Cheques deposited but not yet cleared',
   },
   515: {
-    name: 'CARTES DE CRÉDIT À ENCAISSER',
+    name: 'CREDIT CARD RECEIPTS PENDING SETTLEMENT',
     description: 'Credit card receipts pending settlement',
   },
   518: {
-    name: "AUTRES VALEURS À L'ENCAISSEMENT",
+    name: "OTHER VALUES PENDING COLLECTION L'ENCAISSEMENT",
     description: 'Other values pending collection',
   },
-  5181: { name: 'Warrants', description: 'Warrants pending collection' },
+  5181: {
+    name: 'Warrants pending collection',
+    description: 'Warrants pending collection',
+  },
   5182: {
-    name: 'Billets de fonds',
+    name: 'Business purchase notes receivable pending collection',
     description: 'Business purchase notes receivable pending collection',
   },
   5185: {
-    name: 'Chèques de voyage',
+    name: 'Travellers cheques pending encashment',
     description: 'Travellers cheques pending encashment',
   },
   5186: {
-    name: 'Coupons échus',
+    name: 'Matured coupons pending encashment',
     description: 'Matured coupons pending encashment',
   },
   5187: {
-    name: 'Intérêts échus des obligations',
+    name: 'Matured bond interest coupons pending encashment',
     description: 'Matured bond interest coupons pending encashment',
   },
 
-  // ────────── 52 BANQUES ──────────
+  // ────────── 52 BANKS ──────────
   52: {
-    name: 'BANQUES',
+    name: 'BANKS',
     description: 'Bank accounts (current / demand accounts)',
   },
   521: {
-    name: 'BANQUES LOCALES',
+    name: 'LOCAL BANK ACCOUNTS (SAME COUNTRY)',
     description: 'Local bank accounts (same country)',
   },
   5211: {
-    name: 'BANQUES X',
+    name: 'BANK ACCOUNT X',
     description:
       'Bank account — Bank X (placeholder for actual bank name)',
   },
   5212: {
-    name: 'BANQUE Y',
+    name: 'BANK ACCOUNT Y',
     description:
       'Bank account — Bank Y (placeholder for actual bank name)',
   },
   522: {
-    name: 'BANQUES AUTRES ÉTATS RÉGION',
+    name: 'BANK ACCOUNTS IN OTHER UEMOA MEMBER STATES',
     description: 'Bank accounts in other UEMOA member states',
   },
   523: {
-    name: 'BANQUES AUTRES ÉTATS ZONE MONÉTAIRE',
+    name: 'BANK ACCOUNTS IN OTHER CFA FRANC ZONE STATES',
     description: 'Bank accounts in other CFA franc zone states',
   },
   524: {
-    name: 'BANQUES HORS ZONE MONÉTAIRE',
+    name: 'BANK ACCOUNTS OUTSIDE THE MONETARY ZONE',
     description: 'Bank accounts outside the monetary zone',
   },
   526: {
-    name: 'BANQUES, INTÉRÊTS COURUS',
+    name: 'ACCRUED INTEREST ON BANK ACCOUNTS',
     description: 'Accrued interest on bank accounts',
   },
 
-  // ────────── 53 ÉTABLISSEMENTS FINANCIERS ET ASSIMILÉS ──────────
+  // ────────── 53 FINANCIAL INSTITUTIONS AND EQUIVALENT ──────────
   53: {
-    name: 'ÉTABLISSEMENTS FINANCIERS ET ASSIMILÉS',
+    name: 'FINANCIAL INSTITUTIONS AND EQUIVALENTS (NON-BANK)',
     description: 'Financial institutions and equivalents (non-bank)',
   },
   531: {
-    name: 'CHÈQUES POSTAUX',
+    name: 'POSTAL CHEQUE ACCOUNTS (CCP)',
     description: 'Postal cheque accounts (CCP)',
   },
   532: {
-    name: 'TRÉSOR',
+    name: 'TREASURY',
     description: 'Treasury accounts (government deposits)',
   },
   533: {
-    name: "SOCIÉTÉS DE GESTION ET D'INTERMÉDIATION (S.G.I.)",
+    name: "SECURITIES MANAGEMENT AND BROKERAGE FIRMS (SGI) D'INTERMÉDIATION (S.G.I.)",
     description: 'Securities management and brokerage firms (SGI)',
   },
   536: {
-    name: 'ÉTABLISSEMENTS FINANCIERS, INTÉRÊTS COURUS',
+    name: 'ACCRUED INTEREST ON FINANCIAL INSTITUTION ACCOUNTS',
     description: 'Accrued interest on financial institution accounts',
   },
   538: {
-    name: 'AUTRES ORGANISMES FINANCIERS',
+    name: 'OTHER FINANCIAL ORGANISATIONS',
     description: 'Other financial organisations',
   },
 
-  // ────────── 54 INSTRUMENTS DE TRÉSORERIE ──────────
+  // ────────── 54 TREASURY INSTRUMENTS ──────────
   54: {
-    name: 'INSTRUMENTS DE TRÉSORERIE',
+    name: 'TREASURY INSTRUMENTS (DERIVATIVE FINANCIAL INSTRUMENTS)',
     description: 'Treasury instruments (derivative financial instruments)',
   },
   541: {
-    name: "OPTIONS DE TAUX D'INTÉRÊT",
+    name: "INTEREST RATE OPTIONS D'INTÉRÊT",
     description: 'Interest rate options',
   },
   542: {
-    name: 'OPTIONS DE TAUX DE CHANGE',
+    name: 'FOREIGN EXCHANGE OPTIONS',
     description: 'Foreign exchange options',
   },
   543: {
-    name: 'OPTIONS DE TAUX BOURSIERS',
+    name: 'EQUITY MARKET RATE OPTIONS',
     description: 'Equity market rate options',
   },
   544: {
-    name: 'INSTRUMENTS DE MARCHÉS À TERME',
+    name: 'FUTURES AND FORWARD MARKET INSTRUMENTS',
     description: 'Futures and forward market instruments',
   },
   545: {
-    name: "AVOIRS D'OR ET AUTRES MÉTAUX PRÉCIEUX",
+    name: "GOLD AND PRECIOUS METAL HOLDINGS (TREASURY) D'OR ET AUTRES MÉTAUX PRÉCIEUX",
     description: 'Gold and precious metal holdings (treasury)',
   },
 
-  // ────────── 56 BANQUES, CRÉDITS DE TRÉSORERIE ET D'ESCOMPTE ──────────
+  // ────────── 56 BANKS, OVERDRAFTS AND DISCOUNT FACILITIES ──────────
   56: {
-    name: "BANQUES, CRÉDITS DE TRÉSORERIE ET D'ESCOMPTE",
+    name: "BANK OVERDRAFTS, SHORT-TERM CREDIT FACILITIES AND DISCOUNTING D'ESCOMPTE",
     description:
       'Bank overdrafts, short-term credit facilities and discounting',
   },
   561: {
-    name: 'CRÉDITS DE TRÉSORERIE',
+    name: 'SHORT-TERM BANK CREDIT FACILITIES (REVOLVING CREDIT)',
     description: 'Short-term bank credit facilities (revolving credit)',
   },
   564: {
-    name: 'ESCOMPTE DE CRÉDITS DE CAMPAGNE',
+    name: 'DISCOUNTING OF SEASONAL / CAMPAIGN CREDIT FACILITIES',
     description: 'Discounting of seasonal / campaign credit facilities',
   },
   565: {
-    name: 'ESCOMPTE DE CRÉDITS ORDINAIRES',
+    name: 'ORDINARY BILL DISCOUNTING FACILITIES',
     description: 'Ordinary bill discounting facilities',
   },
   566: {
-    name: 'BANQUES, CRÉDITS DE TRÉSORERIE, INTÉRÊTS COURUS',
+    name: 'ACCRUED INTEREST ON SHORT-TERM BANK CREDIT AND DISCOUNTING',
     description:
       'Accrued interest on short-term bank credit and discounting',
   },
 
-  // ────────── 57 CAISSE ──────────
-  57: { name: 'CAISSE', description: 'Cash on hand (petty cash)' },
-  571: { name: 'CAISSE SIÈGE SOCIAL', description: 'Head office cash' },
+  // ────────── 57 CASH ON HAND ──────────
+  57: { name: 'CASH', description: 'Cash on hand (petty cash)' },
+  571: { name: 'HEAD OFFICE CASH', description: 'Head office cash' },
   5711: {
-    name: 'en unités monétaires légales',
+    name: 'in legal currency units',
     description: 'Head office cash — local currency',
   },
   5712: {
-    name: 'en devises',
+    name: 'in foreign currencies',
     description: 'Head office cash — foreign currency',
   },
-  572: { name: 'CAISSE SUCCURSALE A', description: 'Branch A cash' },
+  572: { name: 'BRANCH A CASH', description: 'Branch A cash' },
   5721: {
-    name: 'en unités monétaires légales',
+    name: 'in legal currency units',
     description: 'Branch A cash — local currency',
   },
   5722: {
-    name: 'en devises',
+    name: 'in foreign currencies',
     description: 'Branch A cash — foreign currency',
   },
-  573: { name: 'CAISSE SUCCURSALE B', description: 'Branch B cash' },
+  573: { name: 'BRANCH B CASH', description: 'Branch B cash' },
   5731: {
-    name: 'en unités monétaires légales',
+    name: 'in legal currency units',
     description: 'Branch B cash — local currency',
   },
   5732: {
-    name: 'en devises',
+    name: 'in foreign currencies',
     description: 'Branch B cash — foreign currency',
   },
 
-  // ────────── 58 RÉGIES D'AVANCES, ACCRÉDITIFS ET VIREMENTS INTERNES ──────────
+  // ────────── 58 IMPREST ACCOUNTS, LETTERS OF CREDIT AND INTERNAL TRANSFERS ──────────
   58: {
-    name: "RÉGIES D'AVANCES, ACCRÉDITIFS ET VIREMENTS INTERNES",
+    name: "PETTY CASH ADVANCES, LETTERS OF CREDIT AND INTERNAL TRANSFERS D'AVANCES, ACCRÉDITIFS ET VIREMENTS INTERNES",
     description:
       'Petty cash advances, letters of credit and internal transfers',
   },
   581: {
-    name: "RÉGIES D'AVANCE",
+    name: "IMPREST PETTY CASH FUNDS D'AVANCE",
     description: 'Imprest petty cash funds',
   },
-  582: { name: 'ACCRÉDITIFS', description: 'Letters of credit' },
+  582: { name: 'LETTERS OF CREDIT', description: 'Letters of credit' },
   585: {
-    name: 'VIREMENTS DE FONDS',
+    name: 'INTERNAL FUND TRANSFERS IN TRANSIT',
     description: 'Internal fund transfers in transit',
   },
   588: {
-    name: 'AUTRES VIREMENTS INTERNES',
+    name: 'OTHER INTERNAL TRANSFERS',
     description: 'Other internal transfers',
   },
 
-  // ────────── 59 DÉPRÉCIATIONS ET RISQUES PROVISIONNÉS ──────────
+  // ────────── 59 IMPAIRMENT AND RISK PROVISIONS ──────────
   59: {
-    name: 'DÉPRÉCIATIONS ET RISQUES PROVISIONNÉS',
+    name: 'IMPAIRMENT PROVISIONS AND PROVISIONED RISKS ON TREASURY ACCOUNTS',
     description:
       'Impairment provisions and provisioned risks on treasury accounts',
   },
   590: {
-    name: 'DÉPRÉCIATIONS DES TITRES DE PLACEMENT',
+    name: 'IMPAIRMENT ON SHORT-TERM INVESTMENT SECURITIES',
     description: 'Impairment on short-term investment securities',
   },
   591: {
-    name: 'DÉPRÉCIATIONS DES TITRES ET VALEURS À ENCAISSER',
+    name: 'IMPAIRMENT ON BILLS AND VALUES PENDING COLLECTION',
     description: 'Impairment on bills and values pending collection',
   },
   592: {
-    name: 'DÉPRÉCIATIONS DES COMPTES BANQUES',
+    name: 'IMPAIRMENT ON BANK ACCOUNTS',
     description: 'Impairment on bank accounts',
   },
   593: {
-    name: 'DÉPRÉCIATIONS DES COMPTES ÉTABLISSEMENTS FINANCIERS ET ASSIMILÉS',
+    name: 'IMPAIRMENT ON FINANCIAL INSTITUTION ACCOUNTS',
     description: 'Impairment on financial institution accounts',
   },
   594: {
-    name: "DÉPRÉCIATIONS DES COMPTES D'INSTRUMENTS DE TRÉSORERIE",
+    name: "IMPAIRMENT ON TREASURY INSTRUMENT ACCOUNTS D'INSTRUMENTS DE TRÉSORERIE",
     description: 'Impairment on treasury instrument accounts',
   },
   599: {
-    name: 'RISQUES PROVISIONNÉS À CARACTÈRE FINANCIER',
+    name: 'SHORT-TERM PROVISIONS FOR FINANCIAL RISKS',
     description: 'Short-term provisions for financial risks',
   },
 } as const satisfies Plan;

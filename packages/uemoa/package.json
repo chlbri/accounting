@@ -1,6 +1,6 @@
 {
   "name": "@bemedev/accounting-uemoa",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "SYSCOHADA / UEMOA Chart of Accounts",
   "type": "module",
   "main": "lib/index.js",

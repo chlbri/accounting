@@ -1,6 +1,21 @@
 ## CHANGELOG
 
-<br/>
+<details>
+<summary>
+
+## **[0.2.0] - 23/06/2026** => _21:19_
+
+</summary>
+
+- Translate all account and subaccount names from French to English in the
+  chart of accounts (classes 1 to 9).
+- Translate all code comments and headers from French to English.
+- Update unit tests to reflect the English names.
+- Update UI table header from Name (FR) to Name (EN) in viewer component.
+- <u>Test coverage **_100%_**</u>
+
+</details>
+
 <br/>
 
 <details>

@@ -6,12 +6,12 @@ describe('bemedev accounting uemoa', () => {
       expect(accountPlan[10].name).toBe('CAPITAL');
     });
 
-    test('##002 => number: 11, name = "RÉSERVES" ', () => {
-      expect(accountPlan[11].name).toBe('RÉSERVES');
+    test('##002 => number: 11, name = "RESERVES" ', () => {
+      expect(accountPlan[11].name).toBe('RESERVES');
     });
 
-    test('##003 => number: 12, name = "REPORT À NOUVEAU" ', () => {
-      expect(accountPlan[12].name).toBe('REPORT À NOUVEAU');
+    test('##003 => number: 12, name = "RETAINED EARNINGS" ', () => {
+      expect(accountPlan[12].name).toBe('RETAINED EARNINGS');
     });
   });
 });
