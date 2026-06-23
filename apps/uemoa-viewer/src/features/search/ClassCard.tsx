@@ -18,7 +18,7 @@ type Props = {
   meta: ClassMeta;
 };
 
-const ClassCard: Component<Props> = props => {
+export const ClassCard: Component<Props> = props => {
   const icon = CLASS_ICONS[props.meta.id - 1] ?? '📒';
   const count = props.meta.accounts.length;
 
@@ -57,5 +57,3 @@ const ClassCard: Component<Props> = props => {
     </Link>
   );
 };
-
-export default ClassCard;

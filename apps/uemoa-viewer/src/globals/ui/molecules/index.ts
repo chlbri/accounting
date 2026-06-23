@@ -6,5 +6,3 @@ export * from './MultiText';
 export * from './reducer';
 export * from './Tooltip';
 export * from './TypingText';
-export { default as AccountsTable } from './AccountsTable';
-export { default as ClassCard } from './ClassCard';

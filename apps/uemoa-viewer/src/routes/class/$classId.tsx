@@ -1,7 +1,7 @@
 import { createFileRoute, notFound } from '@tanstack/solid-router';
 import { Show } from 'solid-js';
 import { CLASS_META } from '#constants';
-import AccountsTable from '~ui/molecules/AccountsTable';
+import { AccountsTable } from '~/features/search/AccountsTable';
 
 const CLASS_ICONS = ['🏛️', '🏗️', '📦', '📋', '💰', '📉', '📈', '🔖', '🧮'];
 
