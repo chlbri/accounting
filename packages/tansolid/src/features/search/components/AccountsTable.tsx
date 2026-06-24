@@ -1,11 +1,11 @@
-import { For, Show, type Component } from 'solid-js';
+import { For, Show, type Accessor, type Component } from 'solid-js';
 import { CLASS_META } from '../constants';
 import type { AccountEntry } from '../types';
 import { createSearch } from '../hooks';
 import { cn } from '../../../globals/ui/cn/utils';
 
 type Props = {
-  accounts: AccountEntry[];
+  accounts: Accessor<AccountEntry[]>;
   showClass?: boolean;
 };
 
@@ -17,7 +17,7 @@ function getClassLabel(classId: number) {
 
 export const AccountsTable: Component<Props> = props => {
   const { filtered, toggleSort, sortDir, setSearch, search } =
-    createSearch(...props.accounts);
+    createSearch(props.accounts);
   const showClass = props.showClass === true;
   const showTable = () => !showClass || search().trim().length > 0;
 

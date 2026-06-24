@@ -8,14 +8,4 @@
  * @see https://www.ohada.com/
  */
 
-/**
- * A single account entry in the SYSCOHADA chart of accounts.
- */
-export type Account = {
-  /** English name of the account */
-  name: string;
-  /** English description / translation of the account */
-  description: string;
-};
-
-export type Plan = Record<number, Account>;
+export type Plan = Record<number, string>;

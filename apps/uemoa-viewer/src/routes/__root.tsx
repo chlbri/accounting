@@ -7,43 +7,67 @@ import {
   Scripts,
 } from '@tanstack/solid-router';
 import { TanStackRouterDevtools } from '@tanstack/solid-router-devtools';
-import { For } from 'solid-js';
+import { For, onMount } from 'solid-js';
 import { HydrationScript } from 'solid-js/web';
 import appCss from '../../tailwind.css?url';
+import service from '../features/search/service';
+import { LangSwitcher } from '../features/search/LangSwitcher';
 
 const NavBar = () => (
-  <nav class='flex-1 overflow-y-auto py-3 px-2 space-y-0.5'>
-    <Link
-      to='/'
-      class='flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm text-sidebar-foreground/70 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground transition-all ease-linear duration-300 no-underline'
-      activeProps={{
-        class:
-          'bg-sidebar-accent text-sidebar-accent-foreground font-semibold transition-all ease-linear duration-300',
-      }}
-      activeOptions={{ exact: true }}
-    >
-      <span class='text-base'>🏠</span>
-      Overview
-    </Link>
-    <For each={CLASS_META}>
-      {meta => (
-        <Link
-          to='/class/$classId'
-          params={{ classId: String(meta.id) }}
-          class='flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm text-sidebar-foreground/70 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground transition-colors no-underline!'
-          activeProps={{
-            class:
-              'bg-sidebar-accent text-sidebar-accent-foreground font-semibold',
-          }}
-        >
-          <span class='font-mono text-xs font-bold bg-sidebar-primary/10 text-blue-400 rounded px-1.5 py-0.5 tabular-nums'>
-            {meta.id}
-          </span>
-          <span class='truncate'>{meta.description}</span>
-        </Link>
-      )}
-    </For>
-  </nav>
+  <aside class='w-64 shrink-0 border-r border-border bg-sidebar flex flex-col fixed min-h-screen'>
+    {/* Brand */}
+    <div class='px-5 py-6 border-b border-border'>
+      <Link to='/' class='no-underline! block group'>
+        <p class='text-xs font-semibold uppercase tracking-widest text-muted-foreground group-hover:text-primary transition-colors'>
+          SYSCOHADA
+        </p>
+        <h1 class='text-lg font-bold text-sidebar-foreground leading-tight mt-0.5'>
+          Plan Comptable
+          <br />
+          <span class='text-primary'>UEMOA</span>
+        </h1>
+      </Link>
+    </div>
+    <nav class='flex-1 overflow-y-auto py-3 px-2 space-y-0.5'>
+      <Link
+        to='/'
+        class='flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm text-sidebar-foreground/70 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground transition-all ease-linear duration-300 no-underline'
+        activeProps={{
+          class:
+            'bg-sidebar-accent text-sidebar-accent-foreground font-semibold transition-all ease-linear duration-300',
+        }}
+        activeOptions={{ exact: true }}
+      >
+        <span class='text-base'>🏠</span>
+        Overview
+      </Link>
+      <For each={CLASS_META}>
+        {meta => (
+          <Link
+            to='/class/$classId'
+            params={{ classId: String(meta.id) }}
+            class='flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm text-sidebar-foreground/70 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground transition-colors no-underline!'
+            activeProps={{
+              class:
+                'bg-sidebar-accent text-sidebar-accent-foreground font-semibold',
+            }}
+          >
+            <span class='font-mono text-xs font-bold bg-sidebar-primary/10 text-blue-400 rounded px-1.5 py-0.5 tabular-nums'>
+              {meta.id}
+            </span>
+            <span class='truncate'>{meta.description}</span>
+          </Link>
+        )}
+      </For>
+    </nav>
+    {/* Footer */}
+    <div class='px-4 py-4 border-t border-border space-y-4'>
+      <LangSwitcher />
+      <p class='text-xs text-muted-foreground'>
+        OHADA — {new Date().getFullYear()}
+      </p>
+    </div>
+  </aside>
 );
 
 export const Route = createRootRoute({
@@ -74,6 +98,8 @@ export const Route = createRootRoute({
   }),
 
   component: () => {
+    onMount(service.start);
+
     return (
       <html class='dark'>
         <head>
@@ -83,31 +109,7 @@ export const Route = createRootRoute({
           <HeadContent />
           <div class='flex min-h-screen bg-background'>
             {/* Sidebar */}
-            <aside class='w-64 shrink-0 border-r border-border bg-sidebar flex flex-col'>
-              {/* Brand */}
-              <div class='px-5 py-6 border-b border-border'>
-                <Link to='/' class='no-underline! block group'>
-                  <p class='text-xs font-semibold uppercase tracking-widest text-muted-foreground group-hover:text-primary transition-colors'>
-                    SYSCOHADA
-                  </p>
-                  <h1 class='text-lg font-bold text-sidebar-foreground leading-tight mt-0.5'>
-                    Plan Comptable
-                    <br />
-                    <span class='text-primary'>UEMOA</span>
-                  </h1>
-                </Link>
-              </div>
-
-              {/* Nav */}
-              <NavBar />
-
-              {/* Footer */}
-              <div class='px-4 py-3 border-t border-border'>
-                <p class='text-xs text-muted-foreground'>
-                  OHADA — {new Date().getFullYear()}
-                </p>
-              </div>
-            </aside>
+            <NavBar />
 
             {/* Main content */}
             <main class='flex-1 overflow-y-auto'>

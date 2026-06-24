@@ -1,7 +1,7 @@
 export type AccountEntry = {
   code: number;
   name: string;
-  description: string;
+  description?: string;
   classId: number;
 };
 
