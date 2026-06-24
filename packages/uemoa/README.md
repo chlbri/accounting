@@ -17,7 +17,7 @@ pnpm add @bemedev/accounting-uemoa
 import { accountPlan } from '@bemedev/accounting-uemoa';
 
 const account = accountPlan[10];
-// { name: 'CAPITAL', description: 'Capital accounts' }
+// 'CAPITAL'
 ```
 
 ## Features
@@ -28,8 +28,7 @@ const account = accountPlan[10];
   codes.
 - **Strongly Typed**: Provides `AccountCode` union type matching all valid
   account codes.
-- **English Names & Descriptions**: Each account features its English
-  `name` and English `description`.
+- **English Names**: Each account maps directly to its English name.
 
 <br/>
 

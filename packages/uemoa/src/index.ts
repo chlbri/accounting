@@ -28,7 +28,7 @@ import { class7Accounts, type Class7AccountCode } from './class7';
 import { class8Accounts, type Class8AccountCode } from './class8';
 import { class9Accounts, type Class9AccountCode } from './class9';
 
-export type { Account, Plan } from './types';
+export type { Plan } from './types';
 export { class1Accounts, Class1AccountCode };
 export { class2Accounts, Class2AccountCode };
 export { class3Accounts, Class3AccountCode };

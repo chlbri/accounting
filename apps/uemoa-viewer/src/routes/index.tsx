@@ -1,8 +1,29 @@
 import { createFileRoute } from '@tanstack/solid-router';
 import { AccountsTable, ALL_ACCOUNTS } from '@bemedev/tansolid';
+import { accounts } from '../features/search/i18n';
+import { useService } from '@bemedev/app-solidjs';
+import service from '../features/search/service';
+import { createEffect, createMemo } from 'solid-js';
 
 export const Route = createFileRoute('/')({
   component: () => {
+    const lang = useService(service, c => c.context);
+    createEffect(() => console.log(lang()));
+
+    const accountsWithDescriptions = createMemo(() =>
+      ALL_ACCOUNTS.map(acc => {
+        const key = String(acc.code);
+        const description =
+          key in accounts.config
+            ? accounts.translate(key as any).to(lang())
+            : undefined;
+        return {
+          ...acc,
+          description,
+        };
+      }),
+    );
+
     return (
       <div class='p-6 md:p-8 max-w-5xl mx-auto'>
         {/* Header */}
@@ -13,18 +34,11 @@ export const Route = createFileRoute('/')({
           <h2 class='text-3xl font-extrabold text-foreground tracking-tight'>
             Search all accounts
           </h2>
-          <p class='mt-2 text-muted-foreground max-w-xl'>
-            Search across all{' '}
-            <span class='font-semibold text-primary tabular-nums'>
-              {ALL_ACCOUNTS.length}
-            </span>{' '}
-            accounts by code, French name, or English description.
-          </p>
         </div>
 
         {/* Search bar */}
         <div class='relative mb-4'>
-          <AccountsTable accounts={ALL_ACCOUNTS} showClass />
+          <AccountsTable accounts={accountsWithDescriptions} showClass lang={lang} />
         </div>
       </div>
     );
