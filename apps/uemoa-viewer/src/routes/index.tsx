@@ -38,7 +38,7 @@ export const Route = createFileRoute('/')({
 
         {/* Search bar */}
         <div class='relative mb-4'>
-          <AccountsTable accounts={accountsWithDescriptions} showClass />
+          <AccountsTable accounts={accountsWithDescriptions} showClass lang={lang} />
         </div>
       </div>
     );

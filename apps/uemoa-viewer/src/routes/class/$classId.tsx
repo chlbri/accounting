@@ -63,7 +63,10 @@ export const Route = createFileRoute('/class/$classId')({
               </div>
 
               {/* Accounts table with search */}
-              <AccountsTable accounts={accountsWithDescriptions} />
+              <AccountsTable
+                accounts={accountsWithDescriptions}
+                lang={lang}
+              />
             </div>
           );
         }}
