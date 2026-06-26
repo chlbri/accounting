@@ -10,8 +10,8 @@
  * ```ts
  * import { accountPlan } from '@bemedev/accounting-uemoa';
  *
- * const account = accountPlan[6011];
- * // { name: 'within the Region', description: 'Merchandise purchases within the UEMOA region' }
+ * const account = accountPlan[10];
+ * // 'CAPITAL'
  * ```
  *
  * @see https://www.ohada.com/
@@ -43,7 +43,7 @@ export { class9Accounts, Class9AccountCode };
  * The complete SYSCOHADA / UEMOA chart of accounts — all 9 classes merged
  * into a single `as const` record.
  *
- * Keys are numeric account codes. Values are `{ name, description }` objects.
+ * Keys are numeric account codes. Values are account names as strings.
  */
 export const accountPlan = {
   ...class1Accounts,

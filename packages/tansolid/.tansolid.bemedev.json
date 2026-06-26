@@ -2,16 +2,16 @@
   "version": "1.0.0",
   "path": "globals",
   "files": [
-    "ui/molecules/LangSwitcher.constants",
-    "ui/molecules/LangSwitcher.types",
     "ui/molecules/Tooltip.constants",
     "ui/molecules/Tooltip.types",
+    "ui/molecules/LangSwitcher.constants",
+    "ui/molecules/LangSwitcher.types",
     "utils/types",
     "constants/colors",
     "constants/index",
     "types/index",
-    "ui/molecules/LangSwitcher",
+    "ui/cn/utils",
     "ui/molecules/Select",
-    "ui/cn/utils"
+    "ui/molecules/LangSwitcher"
   ]
 }

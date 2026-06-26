@@ -1,8 +1,7 @@
-import { Select } from './Select';
-import { Check, ChevronDown } from 'lucide-solid';
 import type { Component } from 'solid-js';
-import type { LanguageOption } from './LangSwitcher.types';
 import { DEFAULT_LANG } from './LangSwitcher.constants';
+import type { LanguageOption } from './LangSwitcher.types';
+import { Select } from './Select';
 
 type Props = {
   langs?: LanguageOption[];
@@ -13,10 +12,10 @@ type Props = {
 
 /**
  * LangSwitcher variable - Auto-generated expression
- *
+ * 
  * ⚠️ WARNING: This expression is auto-generated and should not be modified.
  * Any manual changes will be overwritten during the next generation.
- *
+ * 
  * @generated
  * @readonly
  * @author chlbri (bri_lvi@icloud.com)
@@ -54,9 +53,6 @@ export const LangSwitcher: Component<Props> = ({
                 {itemProps.item.rawValue.label}
               </Select.ItemLabel>
             </div>
-            <Select.ItemIndicator class='flex items-center justify-center text-sidebar-primary-foreground'>
-              <Check class='w-4 h-4' />
-            </Select.ItemIndicator>
           </Select.Item>
         )}
       >
@@ -74,9 +70,6 @@ export const LangSwitcher: Component<Props> = ({
               );
             }}
           </Select.Value>
-          <Select.Icon class='flex items-center text-sidebar-foreground/50 group-hover:text-sidebar-foreground transition-colors'>
-            <ChevronDown class='w-4 h-4 transition-transform duration-300 group-data-expanded:rotate-180' />
-          </Select.Icon>
         </Select.Trigger>
         <Select.Portal>
           <Select.Content class='z-50 min-w-40 overflow-hidden rounded-xl border border-sidebar-border bg-sidebar/95 backdrop-blur-md p-1.5 text-sidebar-foreground shadow-2xl animate-in fade-in-80 slide-in-from-top-1 duration-200'>
@@ -89,3 +82,5 @@ export const LangSwitcher: Component<Props> = ({
 };
 
 export default LangSwitcher;
+
+    

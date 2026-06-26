@@ -3,6 +3,26 @@
 <details>
 <summary>
 
+## **[0.3.0] - 26/06/2026** => _00:12_
+
+</summary>
+
+- Refactor: Simplify account definitions in the chart of accounts (classes
+  1 to 9) from objects containing name and description to simple string
+  names
+- Remove: Export of unused `Account` type
+- Update: Adjust unit tests to match the new string-based structure of the
+  account plan
+- Update: Bump devDependencies (`@bemedev/dev-utils` and `rolldown`)
+- <u>Test coverage **_100%_**</u>
+
+</details>
+
+<br/>
+
+<details>
+<summary>
+
 ## **[0.2.0] - 23/06/2026** => _21:19_
 
 </summary>

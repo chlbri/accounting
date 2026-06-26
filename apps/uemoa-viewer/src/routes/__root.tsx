@@ -11,7 +11,7 @@ import { For, onMount } from 'solid-js';
 import { HydrationScript } from 'solid-js/web';
 import appCss from '../../tailwind.css?url';
 import service from '../features/search/service';
-import { LangSwitcher } from '../features/search/LangSwitcher';
+import { LangSwitcher } from '@bemedev/tansolid';
 
 const NavBar = () => (
   <aside class='w-64 shrink-0 border-r border-border bg-sidebar sticky top-0 flex flex-col h-screen z-50'>
@@ -62,7 +62,17 @@ const NavBar = () => (
     </nav>
     {/* Footer */}
     <div class='px-4 py-4 border-t border-border space-y-4'>
-      <LangSwitcher />
+      <LangSwitcher
+        langs={[
+          { value: 'en', label: 'English', flag: '🇺🇸' },
+          { value: 'fr', label: 'Français', flag: '🇫🇷' },
+          { value: 'es', label: 'Español', flag: '🇪🇸' },
+        ]}
+        defaultLang='fr'
+        onChange={option =>
+          service.send({ type: 'SET_LANG', payload: option.value })
+        }
+      />
       <p class='text-xs text-muted-foreground'>
         OHADA — {new Date().getFullYear()}
       </p>
