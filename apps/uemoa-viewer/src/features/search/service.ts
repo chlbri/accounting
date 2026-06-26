@@ -2,19 +2,15 @@ import { accounts } from '#i18n';
 import { createMachine, interpret, typings } from '@bemedev/app';
 
 const SearchMachine = createMachine(
-  {
-    initial: 'work',
-    states: {
-      work: {
-        on: { SET_LANG: { actions: ['setLang'] } },
-      },
-    },
-  },
+  { on: { SET_LANG: { actions: ['setLang'] } } },
   {
     sync: true,
     context: typings.pContext(({ litterals }) =>
       litterals(...accounts.keys),
     ),
+    eventsMap: typings.eventsMap({
+      SET_LANG: 'string',
+    }),
   },
 ).provideOptions(({ assign }) => ({
   actions: {
@@ -24,5 +20,5 @@ const SearchMachine = createMachine(
   },
 }));
 
-const service = interpret(SearchMachine, { context: accounts.keys[0] });
+const service = interpret(SearchMachine, { context: 'fr' });
 export default service;

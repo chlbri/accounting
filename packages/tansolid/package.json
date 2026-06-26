@@ -28,7 +28,9 @@
     "_ci": "pnpm run lint && pnpm run test"
   },
   "dependencies": {
+    "@kobalte/core": "^0.13.11",
     "clsx": "^2.1.1",
+    "lucide-solid": "^1.21.0",
     "tailwind-merge": "^3.6.0"
   },
   "peerDependencies": {

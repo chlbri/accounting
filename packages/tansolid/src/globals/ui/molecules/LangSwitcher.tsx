@@ -1,52 +1,57 @@
-import { useService } from '@bemedev/app-solidjs';
-import { Select } from '@kobalte/core/select';
+import { Select } from './Select';
 import { Check, ChevronDown } from 'lucide-solid';
-import service from './service';
+import type { Component } from 'solid-js';
+import type { LanguageOption } from './LangSwitcher.types';
+import { DEFAULT_LANG } from './LangSwitcher.constants';
 
-interface LanguageOption {
-  value: 'en' | 'fr' | 'es';
-  label: string;
-  flag: string;
-}
+type Props = {
+  langs?: LanguageOption[];
+  defaultLang?: string;
+  onChange?: (option: LanguageOption) => void;
+  placeholder?: string;
+};
 
-const languages: LanguageOption[] = [
-  { value: 'en', label: 'English', flag: '🇺🇸' },
-  { value: 'fr', label: 'Français', flag: '🇫🇷' },
-  { value: 'es', label: 'Español', flag: '🇪🇸' },
-];
-
-export const LangSwitcher = () => {
-  const lang = useService(service, c => c.context);
-
-  const selectedOption =
-    languages.find(l => l.value === lang()) ?? languages[0];
-
-  const handleValueChange = (option: LanguageOption | null) => {
-    if (option) {
-      service.send({ type: 'SET_LANG' as any, payload: option.value });
-    }
-  };
+/**
+ * LangSwitcher variable - Auto-generated expression
+ *
+ * ⚠️ WARNING: This expression is auto-generated and should not be modified.
+ * Any manual changes will be overwritten during the next generation.
+ *
+ * @generated
+ * @readonly
+ * @author chlbri (bri_lvi@icloud.com)
+ */
+export const LangSwitcher: Component<Props> = ({
+  langs = [],
+  defaultLang,
+  onChange,
+  placeholder,
+}) => {
+  const selected =
+    langs.find(l => l.value === defaultLang) ?? langs[0] ?? DEFAULT_LANG;
 
   return (
     <div class='relative w-full'>
       <Select<LanguageOption>
-        defaultValue={selectedOption}
-        onChange={handleValueChange}
-        options={languages}
+        defaultValue={selected}
+        options={langs}
         optionValue='value'
         optionTextValue='label'
-        placeholder='Select language'
-        itemComponent={props => (
+        placeholder={placeholder}
+        onChange={option => {
+          if (option) onChange?.(option);
+        }}
+        itemComponent={itemProps => (
           <Select.Item
-            item={props.item}
+            item={itemProps.item}
             class='flex items-center justify-between px-3 py-2 text-sm text-sidebar-foreground rounded-lg cursor-pointer outline-none select-none hover:bg-sidebar-accent hover:text-sidebar-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50 data-focus:bg-sidebar-accent data-focus:text-sidebar-accent-foreground transition-all duration-150'
           >
             <div class='flex items-center gap-2.5'>
               <span class='text-base leading-none select-none'>
-                {props.item.rawValue.flag}
+                {itemProps.item.rawValue.flag}
               </span>
               <Select.ItemLabel class='font-medium'>
-                {props.item.rawValue.label}
+                {itemProps.item.rawValue.label}
               </Select.ItemLabel>
             </div>
             <Select.ItemIndicator class='flex items-center justify-center text-sidebar-primary-foreground'>
@@ -62,9 +67,9 @@ export const LangSwitcher = () => {
               return (
                 <div class='flex items-center gap-2.5'>
                   <span class='text-base leading-none select-none'>
-                    {selected?.flag}
+                    {selected.flag}
                   </span>
-                  <span class='font-semibold'>{selected?.label}</span>
+                  <span class='font-semibold'>{selected.label}</span>
                 </div>
               );
             }}

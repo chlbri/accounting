@@ -4,7 +4,10 @@
     "outDir": "./lib",
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
-    "rootDir": "./src"
+    "rootDir": "./src",
+    "paths": {
+      "#tansolid/*": ["./src/globals/*"]
+    }
   },
   "exclude": ["./rolldown.config.ts", "./vitest.config.ts"]
 }

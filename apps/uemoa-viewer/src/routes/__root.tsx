@@ -14,7 +14,7 @@ import service from '../features/search/service';
 import { LangSwitcher } from '../features/search/LangSwitcher';
 
 const NavBar = () => (
-  <aside class='w-64 shrink-0 border-r border-border bg-sidebar flex flex-col fixed min-h-screen'>
+  <aside class='w-64 shrink-0 border-r border-border bg-sidebar sticky top-0 flex flex-col h-screen z-50'>
     {/* Brand */}
     <div class='px-5 py-6 border-b border-border'>
       <Link to='/' class='no-underline! block group'>
