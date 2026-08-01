@@ -52,11 +52,11 @@
     "rolldown": "rolldown -c"
   },
   "devDependencies": {
-    "@bemedev/dev-utils": "^0.8.3",
+    "@bemedev/dev-utils": "^1.1.1",
     "@bemedev/shared-vitest": "workspace:^",
-    "rolldown": "^1.1.3",
-    "typescript": "^6.0.3",
-    "vitest": "4.1.9"
+    "rolldown": "^1.2.1",
+    "typescript": "^7.0.2",
+    "vitest": "4.1.10"
   },
   "size-limit": [
     {

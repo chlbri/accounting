@@ -28,9 +28,9 @@
     "_ci": "pnpm run lint && pnpm run test"
   },
   "dependencies": {
-    "@kobalte/core": "^0.13.11",
+    "@kobalte/core": "^0.13.12",
     "clsx": "^2.1.1",
-    "lucide-solid": "^1.21.0",
+    "lucide-solid": "^1.28.0",
     "tailwind-merge": "^3.6.0"
   },
   "peerDependencies": {
@@ -40,9 +40,9 @@
   },
   "devDependencies": {
     "@bemedev/accounting-uemoa": "workspace:*",
-    "@tanstack/solid-router": "1.170.16",
-    "solid-js": "^1.9.13",
-    "typescript": "^6.0.3",
-    "vitest": "4.1.9"
+    "@tanstack/solid-router": "1.170.18",
+    "solid-js": "^1.9.14",
+    "typescript": "^7.0.2",
+    "vitest": "4.1.10"
   }
 }
