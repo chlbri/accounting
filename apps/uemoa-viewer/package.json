@@ -113,7 +113,7 @@
     "@vitest/browser-playwright": "5.0.3",
     "@vitest/coverage-istanbul": "^5.0.3",
     "@vitest/coverage-v8": "^5.0.3",
-    "@vitest/ui": "^5.0.3",
+    "@vitest/ui": "^5.0.5",
     "combinate": "^1.1.11",
     "glob": "^13.0.6",
     "globals": "^17.13.0",
