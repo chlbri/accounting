@@ -22,10 +22,10 @@
   },
   "dependencies": {
     "@bemedev/dev-utils": "^1.5.0",
-    "vitest": "^5.0.3"
+    "vitest": "^5.0.5"
   },
   "devDependencies": {
-    "rolldown": "^1.2.12",
+    "rolldown": "^1.2.16",
     "typescript": "^7.0.2"
   }
 }

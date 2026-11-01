@@ -30,7 +30,7 @@
   "dependencies": {
     "@kobalte/core": "^0.13.14",
     "clsx": "^2.1.1",
-    "lucide-solid": "^1.49.0",
+    "lucide-solid": "^1.66.0",
     "tailwind-merge": "^3.7.0"
   },
   "peerDependencies": {
@@ -40,9 +40,9 @@
   },
   "devDependencies": {
     "@bemedev/accounting-uemoa": "workspace:*",
-    "@tanstack/solid-router": "1.170.38",
-    "solid-js": "^1.9.15",
+    "@tanstack/solid-router": "1.170.43",
+    "solid-js": "^1.9.18",
     "typescript": "^7.0.2",
-    "vitest": "5.0.3"
+    "vitest": "5.0.5"
   }
 }
